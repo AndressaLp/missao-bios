@@ -105,36 +105,36 @@ O formulário foi utilizado como técnica de validação de demanda, conforme so
 
 ### Gráfico da pergunta 1:  
 
-[](../assets/grafico1.png)  
+<img src="./assets/grafico1.png" width="75%">
 
 A maioria dos respondentes (50%) são professores ou atuam na área da educação, outros 33,3% são estudantes ou profissional da área de tecnologia/games e outros 16,7% são pais, mães ou responsáveis por crianças.
 
 ### Gráfico da pergunta 2:  
 
-[](../assets/grafico2.png)  
+<img src="./assets/grafico2.png" width="75%">
 
 A maioria dos respondentes (66,7%) concorda totalmente que o tema do jogo é interessante e adequado para crianças, enquanto 33,3% concordam parcialmente. Não houve respostas negativas.
 
 ### Gráfico da pergunta 3:  
-
-[](../assets/grafico3.png)  
+ 
+<img src="./assets/grafico3.png" width="75%">
 
 A maioria dos respondentes (66,7%) concorda totalmente que aprender ciência por meio do método científico parece eficaz, enquanto 33,3% concordam parcialmente. Não houve respostas negativas.
 
 ### Gráfico da pergunta 4:  
-
-[](../assets/grafico4.png)  
+ 
+<img src="./assets/grafico4.png" width="75%">
 
 A maioria dos respondentes (66,7%) concorda parcialmente que os desafios do jogo parecem educativos e coerentes com a proposta, enquanto 33,3% concordam totalmente. Não houve respostas negativas.
 
 ### Gráfico da pergunta 5:  
 
-[](../assets/grafico5.png)  
+<img src="./assets/grafico5.png" width="75%">
 
 Os respondentes se dividiram igualmente, sendo 50% concordam totalmente e 50% concordam parcialmente que o jogo equilibra bem aprendizado e diversão. Não houve respostas negativas.
 
 ### Respostas da pergunta 6:  
-
-[](../assets/resposta6.png)  
+  
+<img src="./assets/resposta6.png" width="75%">
 
 Nas respostas abertas, os participantes sugeriram melhorias como a adição de níveis de dificuldade (fácil, médio e difícil), maior uso de elementos visuais interativos e inclusão de sistemas de recompensa para aumentar o engajamento. Também foi apontada a necessidade de explicar melhor como os micro-organismos afetam os sistemas da estação. Por outro lado, houve feedback positivo destacando o potencial educativo do jogo e sua contribuição para o desenvolvimento do raciocínio científico.
