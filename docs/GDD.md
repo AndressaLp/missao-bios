@@ -8,8 +8,8 @@
 **Status do Projeto:**  
 Pesquisa
 
-**Versão do Documento:** v0.2  
-**Última atualização:** 24/05/2026
+**Versão do Documento:** v0.3  
+**Última atualização:** 02/06/2026
 
 ---
 
@@ -170,6 +170,87 @@ Explorar a estação → Interagir com NPCs → Resolver desafios científicos �
 | Coleta de itens | Coleta e utiliza itens simples no inventário |
 | Resolução de puzzles | Identificação, associação e experimentação para resolver desafios |
 
+## Estrutura dos Puzzles
+
+### Puzzle 1: Laboratório de Microrganismos
+- Objetivo: Identificar corretamente os microrganismos presentes nas amostras coletadas no planeta Vitta e determinar como eliminá-los.
+- Funcionamento: O jogador recebe três amostras contaminadas, que podem ser analisadas em um microscópio interativo.
+    - Ao observar cada amostra, são exibidas características do microrganismo, como:
+        - Formato
+        - Cor
+        - Comportamento
+        - Ambiente onde foi encontrado
+        - Outras propriedades relevantes
+    - Além da observação, o jogador pode aplicar diferentes métodos experimentais para analisar reações do microrganismo, como:
+        - Aquecimento
+        - Exposição à radiação UV
+        - Aplicação de substâncias químicas
+        - Filtragem
+    - Com base nas observações e experimentos, o jogador deve selecionar:
+        - Qual é o microrganismo
+        - Qual método é eficaz para eliminá-lo
+- Erros: Escolhas incorretas geram explicações educativas fornecidas por NPCs
+    - Após múltiplos erros, dicas são apresentadas
+    - Ao rejogar, novas combinações de microrganismos podem ser geradas
+- Aprendizado:
+    - Observação científica
+    - Comparação de características
+    - Interpretação de dados
+    - Introdução ao método científico
+
+### Puzzle 2: Enfermaria
+- Objetivo: Identificar a causa da contaminação dos pacientes e produzir a cura adequada.
+- Funcionamento:
+    - Cada paciente apresenta informações como:
+        - Sintomas visuais
+        - Temperatura
+        - Frequência cardíaca
+        - Descrição do estado
+    - O jogador deve relacionar essas informações com os dados obtidos no laboratório.
+    - Após isso, o jogador entra em um sistema de criação de cura (ex: bancada ou outra sala), onde pode:
+        - Selecionar ingredientes
+        - Misturar substâncias
+        - Produzir uma solução
+    - Cada substância possui:
+        - Descrição
+        - Efeito
+        - Utilidade
+    - Após produzir a cura, o jogador deve aplicá-la no paciente correto.
+- Erros: 
+    - Misturas incorretas geram reações visuais e feedback educativo
+    - NPCs explicam o motivo do erro
+    - Aplicação incorreta é interrompida com explicação
+- Aprendizado:
+    - Associação lógica
+    - Interpretação de sintomas
+    - Relação entre causa e efeito
+    - Noções básicas de tratamento científico
+
+### Puzzle 3: Purificação da Água
+- Objetivo: Tornar potáveis as amostras de água contaminadas.
+- Funcionamento:
+    - Cada recipiente de água apresenta:
+        - Aparência visual diferente
+        - Descrição
+        - Nível de contaminação
+    - O jogador deve escolher o método mais adequado para purificação, como:
+        - Filtração
+        - Fervura
+        - Destilação
+        - Decantação
+    - O processo é apresentado de forma visual, por exemplo:
+        - Água passando por filtros
+        - Ebulição
+        - Separação de resíduos
+    - Após o processo, um scanner indica se a água está própria para consumo.
+- Erros:
+    - Métodos inadequados mantêm a contaminação
+    - Feedback educativo explica o erro
+- Aprendizado:
+    - Tratamento de água
+    - Propriedades físicas
+    - Processos científicos reais
+
 ## Camera
 
 - Tipo: Top-down (visão de cima)
@@ -305,6 +386,31 @@ Planejamento dos protótipos que serão desenvolvidos:
 <div style="display:flex;flex-direction:column;" align="center">
   <img width="60%" heigth="auto" alt="Protótipo de baixa fidelidade dos controles do jogo" src="./assets/controles.png"/>
   <p>Protótipo de baixa fidelidade dos controles do jogo.</p>
+</div>
+
+## Mockups
+
+Foram desenvolvidos alguns mockups para representar visualmente as principais telas e a organização das informações do jogo. As demais salas e desafios seguirão essa mesma lógica visual, adaptando os elementos de acordo com o contexto de cada tema.
+
+- Menu principal
+
+<div style="display:flex;flex-direction:column;" align="center">
+  <img width="60%" heigth="auto" alt="Protótipo conceitual da tela inicial do jogo." src="./assets/telainicial.png"/>
+  <p>Protótipo conceitual da tela inicial do jogo. O layout, posicionamento dos elementos e artes podem sofrer alterações durante o desenvolvimento, sendo utilizados apenas para representar a proposta visual inicial.</p>
+</div>
+
+- Puzzle 1: Laboratório de microrganismos
+
+<div style="display:flex;flex-direction:column;" align="center">
+  <img width="60%" heigth="auto" alt="Protótipo conceitual de um dos desafios científicos do jogo." src="./assets/telapuzzle1.png"/>
+  <p>Protótipo conceitual de um dos desafios científicos do jogo. Os elementos apresentados representam a ideia geral da interface do puzzle e poderão ser modificados ou refinados durante a implementação.</p>
+</div>
+
+- Painel da estação espacial
+
+<div style="display:flex;flex-direction:column;" align="center">
+  <img width="60%" heigth="auto" alt="Protótipo conceitual da interface principal de gameplay." src="./assets/painelestacao.png"/>
+  <p>Protótipo conceitual da interface principal de gameplay, demonstrando a interação entre personagem, NPCs, objetivos e sistemas da estação. O layout final poderá sofrer alterações conforme os testes e o desenvolvimento do projeto.</p>
 </div>
 
 ---
@@ -465,6 +571,8 @@ Os scripts serão separados por responsabilidade:
 | Linguagem | C# |
 | Versionamento | Git + GitHub |
 | Documentação | Markdown + GitHub |
+| Áudio e efeitos sonoros | itch.io / Pixabay |
+| Pixel Art | Piskel |
 
 ## Controle de Versão
 
@@ -623,6 +731,7 @@ As funcionalidades abaixo foram consideradas para o projeto, porém podem não s
 | Recurso | Fonte | Licença |
 |-----|-----|-----|
 | Fonte de texto | Google Fonts | Gratuito |
+| Música e efeitos sonoros | itch.io / Pixabay | Gratuito |
 | Engine do jogo | Godot Engine | Open Source |
 
 ## Observação
