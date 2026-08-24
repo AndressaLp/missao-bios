@@ -1,0 +1,301 @@
+{
+  "metodosLaboratorio": [
+    { "id": "calor", "nome": "Calor (Aquecimento)" },
+    { "id": "uv", "nome": "Radiação UV" },
+    { "id": "quimico", "nome": "Substância Química" },
+    { "id": "filtragem", "nome": "Filtragem" }
+  ],
+
+  "substanciasCura": [
+    { "id": "sub01", "nome": "Composto Antibacteriano", "efeito": "Elimina bactérias", "utilidade": "Base para curas de infecções bacterianas" },
+    { "id": "sub02", "nome": "Enzima Antiviral", "efeito": "Neutraliza vírus", "utilidade": "Base para curas de infecções virais" },
+    { "id": "sub03", "nome": "Extrato Antiparasitário", "efeito": "Elimina protozoários", "utilidade": "Base para curas de infecções por protozoários" },
+    { "id": "sub04", "nome": "Extrato Febrífugo", "efeito": "Reduz febre alta", "utilidade": "Usar quando o paciente está com temperatura elevada" },
+    { "id": "sub05", "nome": "Estabilizador Cardíaco", "efeito": "Normaliza frequência cardíaca", "utilidade": "Usar quando o paciente está com o coração acelerado" },
+    { "id": "sub06", "nome": "Gel Regenerador de Pele", "efeito": "Trata manchas e irritações na pele", "utilidade": "Usar quando há manchas visíveis no paciente" },
+    { "id": "sub07", "nome": "Solução Calmante Digestiva", "efeito": "Alivia dor de barriga e desconforto digestivo", "utilidade": "Usar em sintomas digestivos" },
+    { "id": "sub08", "nome": "Vitamina Estimulante Imunológica", "efeito": "Combate fraqueza e fadiga", "utilidade": "Usar quando o paciente está sem energia" },
+    { "id": "sub09", "nome": "Composto Neutralizante", "efeito": "Reduz mal-estar geral", "utilidade": "Usar em sintomas gerais inespecíficos" },
+    { "id": "sub10", "nome": "Solução Eletrolítica", "efeito": "Combate tontura e desidratação", "utilidade": "Usar quando o paciente está tonto ou com sede excessiva" },
+    { "id": "sub11", "nome": "Composto Analgésico", "efeito": "Alivia dores no corpo e na cabeça", "utilidade": "Usar quando o paciente relata dor" },
+    { "id": "sub12", "nome": "Solução Detox Respiratória", "efeito": "Alivia tosse e desconforto respiratório", "utilidade": "Usar em sintomas respiratórios" }
+  ],
+
+  "microrganismos": [
+    {
+      "id": "bact01", "nome": "Bacilo Termal", "tipo": "bacteria",
+      "formato": "Bastonete alongado", "cor": "Verde-oliva",
+      "comportamento": "Prolifera rápido em áreas mornas, mas sua membrana é instável.",
+      "pistaMetodo": "Se rompe facilmente quando exposto a altas temperaturas.",
+      "ambiente": "Dutos de aquecimento da estação",
+      "metodoCorreto": "calor",
+      "curaIngredientes": ["sub01", "sub04"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 39.0, "frequenciaCardiacaBpm": 95, "sintomaExtra": "Calafrios frequentes" }
+    },
+    {
+      "id": "bact02", "nome": "Bacilo Glacial", "tipo": "bacteria",
+      "formato": "Bastonete curto", "cor": "Cinza-azulado",
+      "comportamento": "Adaptado a ambientes frios; sua estrutura racha com o calor.",
+      "pistaMetodo": "Fica quebradiço quando aquecido.",
+      "ambiente": "Câmara de resfriamento",
+      "metodoCorreto": "calor",
+      "curaIngredientes": ["sub01", "sub05"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.0, "frequenciaCardiacaBpm": 120, "sintomaExtra": "Palpitações" }
+    },
+    {
+      "id": "bact03", "nome": "Bacilo Salino", "tipo": "bacteria",
+      "formato": "Bastonete espesso", "cor": "Bege",
+      "comportamento": "Forma uma camada protetora resistente ao calor.",
+      "pistaMetodo": "Sua camada protetora se desfaz com substâncias desinfetantes.",
+      "ambiente": "Reservatório salino do laboratório",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub01", "sub06"],
+      "sintomaPaciente": { "manchaVisual": "roxa", "temperaturaC": 37.5, "frequenciaCardiacaBpm": 90, "sintomaExtra": "Coceira leve" }
+    },
+    {
+      "id": "bact04", "nome": "Bacilo Ferruginoso", "tipo": "bacteria",
+      "formato": "Bastonete curvo", "cor": "Alaranjado",
+      "comportamento": "Resiste bem ao calor moderado.",
+      "pistaMetodo": "Sua parede celular reage fortemente a compostos químicos.",
+      "ambiente": "Tubulações metálicas",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub01", "sub11"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.8, "frequenciaCardiacaBpm": 100, "sintomaExtra": "Dor de cabeça constante" }
+    },
+    {
+      "id": "bact05", "nome": "Bacilo Cristalino", "tipo": "bacteria",
+      "formato": "Bastonete translúcido", "cor": "Transparente com brilho",
+      "comportamento": "Estrutura cristalina rígida à temperatura ambiente.",
+      "pistaMetodo": "Sua estrutura se desfaz quando aquecida.",
+      "ambiente": "Sala de cristalização",
+      "metodoCorreto": "calor",
+      "curaIngredientes": ["sub01", "sub08"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 38.0, "frequenciaCardiacaBpm": 98, "sintomaExtra": "Cansaço extremo" }
+    },
+    {
+      "id": "bact06", "nome": "Bacilo Metálico", "tipo": "bacteria",
+      "formato": "Bastonete acinzentado", "cor": "Cinza metálico",
+      "comportamento": "Superfície brilhante que reage a compostos químicos.",
+      "pistaMetodo": "Oxida e se rompe em contato com substâncias químicas.",
+      "ambiente": "Próximo a painéis elétricos",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub01", "sub09"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.6, "frequenciaCardiacaBpm": 102, "sintomaExtra": "Mal-estar constante" }
+    },
+    {
+      "id": "bact07", "nome": "Bacilo Vaporoso", "tipo": "bacteria",
+      "formato": "Bastonete fino", "cor": "Esbranquiçado",
+      "comportamento": "Prolifera em ambientes úmidos.",
+      "pistaMetodo": "Se dissolve rapidamente em altas temperaturas.",
+      "ambiente": "Câmaras de vapor",
+      "metodoCorreto": "calor",
+      "curaIngredientes": ["sub01", "sub12"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 38.2, "frequenciaCardiacaBpm": 100, "sintomaExtra": "Tosse seca persistente" }
+    },
+    {
+      "id": "bact08", "nome": "Bacilo Ácido", "tipo": "bacteria",
+      "formato": "Bastonete pequeno", "cor": "Amarelo",
+      "comportamento": "Resistente a variações de temperatura.",
+      "pistaMetodo": "Reage e se neutraliza em contato com substâncias químicas.",
+      "ambiente": "Tanques de reagentes",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub01", "sub10"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.4, "frequenciaCardiacaBpm": 108, "sintomaExtra": "Tontura ao levantar" }
+    },
+
+    {
+      "id": "vir01", "nome": "Víron Solar", "tipo": "virus",
+      "formato": "Esférico minúsculo", "cor": "Brilho fraco",
+      "comportamento": "Não se move sozinho; depende de um hospedeiro.",
+      "pistaMetodo": "Seu envelope externo se degrada sob radiação ultravioleta forte.",
+      "ambiente": "Painéis externos expostos à luz",
+      "metodoCorreto": "uv",
+      "curaIngredientes": ["sub02", "sub07"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.0, "frequenciaCardiacaBpm": 95, "sintomaExtra": "Dor abdominal leve, sem febre" }
+    },
+    {
+      "id": "vir02", "nome": "Víron Nebular", "tipo": "virus",
+      "formato": "Esférico opaco", "cor": "Cinza-claro",
+      "comportamento": "Furtivo; vive dentro de células do hospedeiro.",
+      "pistaMetodo": "Perde estabilidade quando exposto à luz ultravioleta.",
+      "ambiente": "Sistema de ventilação",
+      "metodoCorreto": "uv",
+      "curaIngredientes": ["sub02", "sub11"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.2, "frequenciaCardiacaBpm": 100, "sintomaExtra": "Dor de cabeça leve" }
+    },
+    {
+      "id": "vir03", "nome": "Víron Prisma", "tipo": "virus",
+      "formato": "Esférico com padrão cristalino", "cor": "Multicolorido fraco",
+      "comportamento": "Reage visivelmente à luz.",
+      "pistaMetodo": "Se desestabiliza sob radiação ultravioleta.",
+      "ambiente": "Laboratório óptico",
+      "metodoCorreto": "uv",
+      "curaIngredientes": ["sub02", "sub12"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.5, "frequenciaCardiacaBpm": 105, "sintomaExtra": "Respiração ofegante" }
+    },
+    {
+      "id": "vir04", "nome": "Víron Aurora", "tipo": "virus",
+      "formato": "Esférico translúcido", "cor": "Azul-claro",
+      "comportamento": "Envelope externo fino e sensível.",
+      "pistaMetodo": "Seu envelope se rompe com exposição à radiação ultravioleta.",
+      "ambiente": "Estufa de plantas",
+      "metodoCorreto": "uv",
+      "curaIngredientes": ["sub02", "sub08"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.3, "frequenciaCardiacaBpm": 92, "sintomaExtra": "Fadiga leve, sem outros sintomas" }
+    },
+    {
+      "id": "vir05", "nome": "Víron Bruma", "tipo": "virus",
+      "formato": "Esférico com envelope espesso", "cor": "Branco-acinzentado",
+      "comportamento": "Envelope espesso resiste bem à luz.",
+      "pistaMetodo": "Sua estrutura reage e se rompe com substâncias químicas desinfetantes.",
+      "ambiente": "Câmara de neblina do laboratório",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub02", "sub04"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 39.2, "frequenciaCardiacaBpm": 110, "sintomaExtra": "Febre alta repentina" }
+    },
+    {
+      "id": "vir06", "nome": "Víron Eco", "tipo": "virus",
+      "formato": "Esférico pequeno", "cor": "Prateado",
+      "comportamento": "Multiplica-se rapidamente dentro do hospedeiro.",
+      "pistaMetodo": "Sua membrana reage a compostos químicos.",
+      "ambiente": "Sistema de comunicação da estação",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub02", "sub05"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.1, "frequenciaCardiacaBpm": 125, "sintomaExtra": "Coração acelerado" }
+    },
+    {
+      "id": "vir07", "nome": "Víron Sombra", "tipo": "virus",
+      "formato": "Esférico escuro", "cor": "Cinza-escuro",
+      "comportamento": "Vive em áreas sem luz da estação.",
+      "pistaMetodo": "Resistente à luz, mas vulnerável a produtos químicos.",
+      "ambiente": "Porão de armazenamento",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub02", "sub06"],
+      "sintomaPaciente": { "manchaVisual": "avermelhada", "temperaturaC": 37.4, "frequenciaCardiacaBpm": 97, "sintomaExtra": "Pequenas manchas na pele" }
+    },
+    {
+      "id": "vir08", "nome": "Víron Cristal", "tipo": "virus",
+      "formato": "Esférico com estrutura rígida", "cor": "Transparente",
+      "comportamento": "Estrutura rígida bloqueia parcialmente a luz.",
+      "pistaMetodo": "Sua estrutura racha em contato com produtos químicos corrosivos.",
+      "ambiente": "Sala de testes ópticos",
+      "metodoCorreto": "quimico",
+      "curaIngredientes": ["sub02", "sub10"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.0, "frequenciaCardiacaBpm": 115, "sintomaExtra": "Tontura e boca seca" }
+    },
+
+    {
+      "id": "prot01", "nome": "Protozoa Aquático", "tipo": "protozoario",
+      "formato": "Oval grande", "cor": "Azul-esverdeado",
+      "comportamento": "Move-se com um flagelo, visível a olho nu no microscópio.",
+      "pistaMetodo": "Corpo grande demais para passar pelos poros de um filtro.",
+      "ambiente": "Reservatório externo",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub07"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.0, "frequenciaCardiacaBpm": 100, "sintomaExtra": "Dor de barriga e mal-estar leve" }
+    },
+    {
+      "id": "prot02", "nome": "Protozoa Radial", "tipo": "protozoario",
+      "formato": "Estrelado", "cor": "Vermelho-alaranjado",
+      "comportamento": "Move-se lentamente pela água parada.",
+      "pistaMetodo": "Tamanho grande o suficiente para ficar retido no filtro.",
+      "ambiente": "Tanque de irrigação",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub04"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 38.3, "frequenciaCardiacaBpm": 96, "sintomaExtra": "Febre moderada e calafrios" }
+    },
+    {
+      "id": "prot03", "nome": "Protozoa Espiral", "tipo": "protozoario",
+      "formato": "Helicoidal", "cor": "Verde-claro",
+      "comportamento": "Nada em movimentos espiralados.",
+      "pistaMetodo": "Tamanho grande, retido por filtros finos.",
+      "ambiente": "Cano de drenagem",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub05"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.2, "frequenciaCardiacaBpm": 118, "sintomaExtra": "Palpitações após esforço" }
+    },
+    {
+      "id": "prot04", "nome": "Protozoa Translúcido", "tipo": "protozoario",
+      "formato": "Gelatinoso, quase invisível", "cor": "Transparente",
+      "comportamento": "Difícil de ver, mas de corpo grande.",
+      "pistaMetodo": "Apesar de quase invisível, é grande e retido pela filtragem.",
+      "ambiente": "Poça estagnada",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub06"],
+      "sintomaPaciente": { "manchaVisual": "amarelada", "temperaturaC": 37.3, "frequenciaCardiacaBpm": 100, "sintomaExtra": "Manchas amareladas na pele" }
+    },
+    {
+      "id": "prot05", "nome": "Protozoa Ondulante", "tipo": "protozoario",
+      "formato": "Alongado", "cor": "Rosa-claro",
+      "comportamento": "Move-se ondulando o corpo.",
+      "pistaMetodo": "Corpo grande e visível, eliminado pela filtragem.",
+      "ambiente": "Tanque de cultivo",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub08"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.0, "frequenciaCardiacaBpm": 94, "sintomaExtra": "Fraqueza e sonolência" }
+    },
+    {
+      "id": "prot06", "nome": "Protozoa Fosforescente", "tipo": "protozoario",
+      "formato": "Esférico grande", "cor": "Verde-fluorescente",
+      "comportamento": "Brilha fracamente no escuro.",
+      "pistaMetodo": "Tamanho retido com facilidade pelo filtro.",
+      "ambiente": "Caverna subterrânea da estação",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub09"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.6, "frequenciaCardiacaBpm": 101, "sintomaExtra": "Mal-estar geral" }
+    },
+    {
+      "id": "prot07", "nome": "Protozoa Gelatinoso", "tipo": "protozoario",
+      "formato": "Mole e grande", "cor": "Bege-translúcido",
+      "comportamento": "Corpo mole que se molda ao ambiente.",
+      "pistaMetodo": "Retido facilmente pelo filtro por seu tamanho.",
+      "ambiente": "Sistema de esgoto",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub11"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.4, "frequenciaCardiacaBpm": 99, "sintomaExtra": "Dores no corpo" }
+    },
+    {
+      "id": "prot08", "nome": "Protozoa Ramificado", "tipo": "protozoario",
+      "formato": "Com projeções ramificadas", "cor": "Marrom-claro",
+      "comportamento": "Prende-se a raízes e superfícies.",
+      "pistaMetodo": "Corpo grande e ramificado, retido pelo filtro.",
+      "ambiente": "Raízes da estufa hidropônica",
+      "metodoCorreto": "filtragem",
+      "curaIngredientes": ["sub03", "sub10"],
+      "sintomaPaciente": { "manchaVisual": "nenhuma", "temperaturaC": 37.1, "frequenciaCardiacaBpm": 112, "sintomaExtra": "Tontura e sede excessiva" }
+    }
+  ],
+
+  "metodosPurificacaoAgua": [
+    { "id": "decantacao", "nome": "Decantação" },
+    { "id": "filtracao", "nome": "Filtração" },
+    { "id": "fervura", "nome": "Fervura" },
+    { "id": "destilacao", "nome": "Destilação" }
+  ],
+
+  "aguaContaminada": [
+    { "id": "agua01", "nome": "Água com terra e areia", "aparenciaVisual": "Turva, com sedimento visível no fundo do recipiente", "microrganismoContaminante": null, "pistaMetodo": "Só sujeira física, sem microrganismos — as partículas pesadas afundam com o tempo", "metodoCorreto": "decantacao" },
+    { "id": "agua02", "nome": "Água barrenta do riacho", "aparenciaVisual": "Marrom-amarelada, com partículas de barro suspensas", "microrganismoContaminante": null, "pistaMetodo": "O barro se deposita no fundo quando a água fica parada", "metodoCorreto": "decantacao" },
+    { "id": "agua03", "nome": "Água de irrigação com folhas", "aparenciaVisual": "Com pedaços de folhas e resíduos orgânicos grandes", "microrganismoContaminante": null, "pistaMetodo": "Detritos grandes afundam sozinhos, sem contaminação biológica detectada", "metodoCorreto": "decantacao" },
+    { "id": "agua04", "nome": "Água de poço com ferrugem", "aparenciaVisual": "Avermelhada, com pequenas partículas metálicas", "microrganismoContaminante": null, "pistaMetodo": "As partículas de ferrugem são pesadas e se depositam", "metodoCorreto": "decantacao" },
+    { "id": "agua05", "nome": "Água de limpeza dos tanques", "aparenciaVisual": "Com resíduos sólidos leves flutuando e afundando lentamente", "microrganismoContaminante": null, "pistaMetodo": "Basta esperar os resíduos assentarem, o scanner não detecta microrganismos", "metodoCorreto": "decantacao" },
+
+    { "id": "agua06", "nome": "Água do Reservatório Externo", "aparenciaVisual": "Turva, com pequenos seres nadando visíveis no scanner", "microrganismoContaminante": "prot01", "pistaMetodo": "O Protozoa Aquático foi identificado — corpo grande demais para passar por um filtro", "metodoCorreto": "filtracao" },
+    { "id": "agua07", "nome": "Água do Tanque de Irrigação", "aparenciaVisual": "Levemente turva, com seres estrelados detectados", "microrganismoContaminante": "prot02", "pistaMetodo": "O Protozoa Radial está presente — tamanho grande o bastante para ficar retido no filtro", "metodoCorreto": "filtracao" },
+    { "id": "agua08", "nome": "Água do Cano de Drenagem", "aparenciaVisual": "Esverdeada, com organismos espiralados nadando", "microrganismoContaminante": "prot03", "pistaMetodo": "O Protozoa Espiral foi identificado — grande, retido por filtros finos", "metodoCorreto": "filtracao" },
+    { "id": "agua09", "nome": "Água da Poça Estagnada", "aparenciaVisual": "Parada, com corpos gelatinosos quase invisíveis detectados pelo scanner", "microrganismoContaminante": "prot04", "pistaMetodo": "O Protozoa Translúcido está presente — apesar de difícil de ver, é grande e retido pela filtragem", "metodoCorreto": "filtracao" },
+    { "id": "agua10", "nome": "Água do Tanque de Cultivo", "aparenciaVisual": "Esverdeada, com organismos ondulantes visíveis", "microrganismoContaminante": "prot05", "pistaMetodo": "O Protozoa Ondulante foi identificado — corpo grande, eliminado pela filtragem", "metodoCorreto": "filtracao" },
+
+    { "id": "agua11", "nome": "Água do Reservatório Principal", "aparenciaVisual": "Transparente, sem sujeira visível", "microrganismoContaminante": "bact02", "pistaMetodo": "O scanner detecta o Bacilo Glacial mesmo a água parecendo limpa — precisa de calor para eliminar", "metodoCorreto": "fervura" },
+    { "id": "agua12", "nome": "Água da Câmara de Neblina", "aparenciaVisual": "Cristalina, sem partículas visíveis", "microrganismoContaminante": "vir05", "pistaMetodo": "O scanner indica o Víron Bruma — invisível a olho nu, eliminado pelo calor", "metodoCorreto": "fervura" },
+    { "id": "agua13", "nome": "Água usada na Enfermaria", "aparenciaVisual": "Aparentemente limpa", "microrganismoContaminante": "bact06", "pistaMetodo": "O Bacilo Metálico foi detectado — risco biológico não visível, precisa de calor para eliminar", "metodoCorreto": "fervura" },
+    { "id": "agua14", "nome": "Água do Gerador de Vapor", "aparenciaVisual": "Clara, sem resíduos visíveis", "microrganismoContaminante": "vir01", "pistaMetodo": "O scanner indica o Víron Solar — a fervura elimina o que a filtragem não consegue reter", "metodoCorreto": "fervura" },
+    { "id": "agua15", "nome": "Água estocada há muito tempo", "aparenciaVisual": "Sem sedimento, parece limpa", "microrganismoContaminante": "bact07", "pistaMetodo": "O Bacilo Vaporoso cresceu durante o armazenamento — se dissolve em altas temperaturas", "metodoCorreto": "fervura" },
+
+    { "id": "agua16", "nome": "Água do Tanque Externo", "aparenciaVisual": "Levemente turva, com gosto salgado detectado pelo scanner", "microrganismoContaminante": ["bact03", "prot06"], "pistaMetodo": "Mais de um microrganismo identificado, além de sais dissolvidos — nenhum método sozinho resolve tudo", "metodoCorreto": "destilacao" },
+    { "id": "agua17", "nome": "Água da Reserva de Emergência", "aparenciaVisual": "Turva, com múltiplos tipos de contaminação detectados", "microrganismoContaminante": ["vir03", "prot07"], "pistaMetodo": "Contaminação mista: microrganismos diferentes e resíduos químicos ao mesmo tempo", "metodoCorreto": "destilacao" },
+    { "id": "agua18", "nome": "Água dos Sistemas de Resfriamento", "aparenciaVisual": "Amarelada, com metais dissolvidos", "microrganismoContaminante": ["bact08"], "pistaMetodo": "Além do Bacilo Ácido, há metais dissolvidos que nem o filtro nem a fervura removem", "metodoCorreto": "destilacao" },
+    { "id": "agua19", "nome": "Água Final da Missão", "aparenciaVisual": "Com contaminação mista complexa", "microrganismoContaminante": ["vir08", "prot04"], "pistaMetodo": "A amostra mais desafiadora: é preciso separar a água de tudo que está dissolvido ou vivo nela", "metodoCorreto": "destilacao" },
+    { "id": "agua20", "nome": "Água de fonte desconhecida das ruínas de Vitta", "aparenciaVisual": "Composição incerta, várias contaminações detectadas pelo scanner", "microrganismoContaminante": "desconhecido", "pistaMetodo": "Composição incerta — só a mudança de estado físico (evaporar e condensar) garante água limpa", "metodoCorreto": "destilacao" }
+  ]
+}
