@@ -31,9 +31,9 @@ O aprendizado acontece durante a jogabilidade, com feedbacks claros e explicaç�
 
 O jogador explora uma estação espacial e resolve três desafios principais:
 
-- 🔬 **Laboratório:** análise de micro-organismos presentes em amostras do planeta  
-- 🏥 **Enfermaria:** identificação de problemas em pacientes e criação de soluções  
-- 💧 **Sistema de Água:** purificação de água contaminada utilizando métodos científicos  
+- 🔬 **Laboratório:** análise de micro-organismos presentes em amostras do planeta
+- 🏥 **Enfermaria:** identificação de problemas em pacientes e criação de soluções
+- 💧 **Sistema de Água:** purificação de água contaminada utilizando métodos científicos
 
 As decisões do jogador influenciam o progresso da estação, representado por uma barra de restauração dos sistemas.
 
@@ -50,12 +50,26 @@ As decisões do jogador influenciam o progresso da estação, representado por u
 
 ## 👥 Público-Alvo
 
-- Crianças entre 7 e 11 anos  
-- Estudantes do ensino fundamental  
-- Jogadores casuais 
+- Crianças entre 7 e 11 anos
+- Estudantes do ensino fundamental
+- Jogadores casuais
 
 ---
 
 ## 💻 Plataforma
 
 - Web (navegador)
+
+---
+
+## Como rodar o projeto
+
+O projeto ainda está em fase de documentação, mas o repositório pode ser clonado normalmente para acompanhar o desenvolvimento:
+
+` ` `bash
+git clone https://github.com/AndressaLp/missao-bios.git
+` ` `
+
+Quando o desenvolvimento iniciar, o jogo será feito na engine **Godot**. Para rodar futuramente, basta instalar o [Godot Engine](https://godotengine.org/download), importar a pasta do projeto e clicar em "Play" para executar.
+
+A build jogável também será disponibilizada no Itch.io conforme o desenvolvimento avançar.
