@@ -39,6 +39,14 @@ As decisões do jogador influenciam o progresso da estação, representado por u
 
 ---
 
+## 🖥️ Plataforma
+
+- PC
+- Navegador (se for web)
+- Dispositivos móveis (se estiver planejado)
+  
+---
+
 ## ⭐ Diferencial
 
 - Aprendizagem baseada em experimentação (não em perguntas e respostas)
