@@ -29,13 +29,18 @@ O aprendizado acontece durante a jogabilidade, com feedbacks claros e explicaç�
 
 ## 🎮 Gameplay (Resumo)
 
-O jogador explora uma estação espacial e resolve três desafios principais:
+O jogador explora uma estação espacial contaminada e resolve três desafios principais, cada um representando uma área científica:
 
-- 🔬 **Laboratório:** análise de micro-organismos presentes em amostras do planeta  
-- 🏥 **Enfermaria:** identificação de problemas em pacientes e criação de soluções  
-- 💧 **Sistema de Água:** purificação de água contaminada utilizando métodos científicos  
+🔬 **Laboratório**  
+Análise de micro-organismos coletados do planeta, identificando padrões e possíveis riscos.
 
-As decisões do jogador influenciam o progresso da estação, representado por uma barra de restauração dos sistemas.
+🏥 **Enfermaria** 
+Diagnóstico de pacientes afetados pela contaminação e definição de tratamentos adequados.
+
+💧 **Sistema de Água**  
+Purificação de água contaminada por meio da aplicação de métodos científicos.
+
+As decisões do jogador impactam diretamente o progresso da estação, representado por uma barra de restauração dos sistemas, que indica a recuperação da base ao longo do jogo.
 
 ---
 
