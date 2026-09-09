@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://8xor3rocpung"]
+
+[ext_resource type="PackedScene" uid="uid://bt0umcffjp105" path="res://scenes/player/Player.tscn" id="1_33snf"]
+
+[node name="SalaTeste" type="Node2D" unique_id=1231480580]
+
+[node name="topo" type="StaticBody2D" parent="." unique_id=1727134593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topo" unique_id=599214319]
+
+[node name="base" type="StaticBody2D" parent="." unique_id=1069420478]
+position = Vector2(319, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="base" unique_id=1308611865]
+
+[node name="direito" type="StaticBody2D" parent="." unique_id=1522161901]
+position = Vector2(319, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="direito" unique_id=435622586]
+
+[node name="esquerdo" type="StaticBody2D" parent="." unique_id=1792778251]
+position = Vector2(0, 179)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="esquerdo" unique_id=1247903461]
+
+[node name="Player" parent="." unique_id=1491165222 instance=ExtResource("1_33snf")]
+position = Vector2(157, 90)
