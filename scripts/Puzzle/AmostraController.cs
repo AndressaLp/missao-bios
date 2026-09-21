@@ -32,7 +32,8 @@ namespace MissaoBios.scripts.Puzzle
             var reacao = _reacaoService.AplicarMetodo(_amostra, metodo);
             GD.Print("testando: " + metodo);
 
-            if (reacao == TipoReacao.Evaporou)
+            // quem resolve a amostra é o método correto, a reação é só o efeito visual
+            if (metodo == _amostra.MetodoCorreto)
             {
                 _amostra.Resolvida = true;
             }
