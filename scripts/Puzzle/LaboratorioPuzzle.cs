@@ -27,7 +27,7 @@ namespace MissaoBios.scripts.Puzzle
 
             foreach (var amostra in _amostras)
             {
-                if (!amostra.EstaResolvida())
+                if (amostra.EstaResolvida())
                 {
                     resolvidas++;
                 }
