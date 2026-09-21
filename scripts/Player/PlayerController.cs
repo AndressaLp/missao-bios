@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Godot;
+using MissaoBios.scripts.Managers;
 
 namespace MissaoBios.scripts.Player
 {
     public partial class PlayerController : CharacterBody2D
     {
-         [Export] public float Speed = 60f; // pixels/segundo
+        [Export] public float Speed = 60f; // pixels/segundo
+        [Export] public SpriteFrames FramesMenino;
+        [Export] public SpriteFrames FramesMenina;
 
         private AnimatedSprite2D _sprite;
         private Vector2 _ultimaDirecao = Vector2.Down;
@@ -16,6 +19,10 @@ namespace MissaoBios.scripts.Player
         public override void _Ready()
         {
             _sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+
+            var saveManager = GetNode<SaveManager>("/root/SaveManager");
+            bool ehMenina = saveManager.PerfilAtivo != null && saveManager.PerfilAtivo.Personagem == "menina";
+            _sprite.SpriteFrames = ehMenina ? FramesMenina : FramesMenino;
         }
 
         public override void _PhysicsProcess(double delta)
