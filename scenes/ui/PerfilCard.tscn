@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://bk6cgo14lnkk5"]
+
+[ext_resource type="Texture2D" uid="uid://t5dlxoxi6jup" path="res://assets/art/ui/card.png" id="1_h78iu"]
+[ext_resource type="Script" uid="uid://d3e24gedgvwwk" path="res://scripts/UI/PerfilCard.cs" id="2_pyo6e"]
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="3_mkct3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iegge"]
+atlas = ExtResource("1_h78iu")
+region = Rect2(0, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ibqdc"]
+texture = SubResource("AtlasTexture_iegge")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_so5m4"]
+atlas = ExtResource("1_h78iu")
+region = Rect2(0, 55, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_856m4"]
+texture = SubResource("AtlasTexture_so5m4")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft1yx"]
+atlas = ExtResource("1_h78iu")
+region = Rect2(50, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b24ox"]
+texture = SubResource("AtlasTexture_ft1yx")
+
+[node name="PerfilCard" type="Button" unique_id=2089059643]
+custom_minimum_size = Vector2(50, 55)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ibqdc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_856m4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_b24ox")
+script = ExtResource("2_pyo6e")
+
+[node name="IconPersonagem" type="TextureRect" parent="." unique_id=1803621796]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -19.0
+offset_right = 9.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelNome" type="Label" parent="." unique_id=1800981122]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 10.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("3_mkct3")
+theme_override_font_sizes/font_size = 6
+horizontal_alignment = 1
+vertical_alignment = 1

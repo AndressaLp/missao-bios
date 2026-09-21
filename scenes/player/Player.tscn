@@ -1,142 +1,18 @@
 [gd_scene format=3 uid="uid://bt0umcffjp105"]
 
 [ext_resource type="Script" uid="uid://cm5vgs6ertjcd" path="res://scripts/Player/PlayerController.cs" id="1_gfjak"]
-[ext_resource type="Texture2D" uid="uid://bgop3667gdh06" path="res://assets/art/characters/player_boy.png" id="2_4kuee"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_524rm"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(0, 0, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tpg5x"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(0, 50, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c3xxp"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(0, 100, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_npwbq"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(0, 150, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v42im"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(50, 0, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pn6s4"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(100, 0, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7oing"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(50, 50, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5stf6"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(100, 50, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_180ig"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(50, 100, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_20koh"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(100, 100, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ov1oi"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(50, 150, 50, 50)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rn7t0"]
-atlas = ExtResource("2_4kuee")
-region = Rect2(100, 150, 50, 50)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8qjgm"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_524rm")
-}],
-"loop": true,
-"name": &"idle_down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tpg5x")
-}],
-"loop": true,
-"name": &"idle_left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c3xxp")
-}],
-"loop": true,
-"name": &"idle_right",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_npwbq")
-}],
-"loop": true,
-"name": &"idle_up",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v42im")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pn6s4")
-}],
-"loop": true,
-"name": &"walk_down",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7oing")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5stf6")
-}],
-"loop": true,
-"name": &"walk_left",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_180ig")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_20koh")
-}],
-"loop": true,
-"name": &"walk_right",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ov1oi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rn7t0")
-}],
-"loop": true,
-"name": &"walk_up",
-"speed": 6.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://cxckkd2aeg55v" path="res://resources/menino_frames.tres" id="2_gfjak"]
+[ext_resource type="SpriteFrames" uid="uid://b8vorcxm7sv1c" path="res://resources/menina_frames.tres" id="3_4kuee"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1491165222]
 script = ExtResource("1_gfjak")
+FramesMenino = ExtResource("2_gfjak")
+FramesMenina = ExtResource("3_4kuee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=130420667]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1926772204]
-sprite_frames = SubResource("SpriteFrames_8qjgm")
-animation = &"walk_up"
+sprite_frames = ExtResource("2_gfjak")
+animation = &"idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1490948824]
