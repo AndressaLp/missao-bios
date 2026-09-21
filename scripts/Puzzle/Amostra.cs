@@ -13,7 +13,7 @@ namespace MissaoBios.scripts.Puzzle
         public string NomeMicrorganismo;
         public MetodoLaboratorio MetodoCorreto;
         public bool Resolvida = false;
-        public bool foiTestada;
+        public bool FoiTestada;
     }
 
     public enum MetodoLaboratorio
