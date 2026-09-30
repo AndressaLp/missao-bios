@@ -1,0 +1,300 @@
+[gd_scene format=3 uid="uid://bx5mobokcatts"]
+
+[ext_resource type="Script" uid="uid://bx6prqqq2ah18" path="res://scripts/UI/PauseMenuController.cs" id="1_5twic"]
+[ext_resource type="Texture2D" uid="uid://de8hdpt5u6wcq" path="res://assets/art/ui/modal.png" id="1_n5dsq"]
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="2_5twic"]
+[ext_resource type="Texture2D" uid="uid://bukqas48hyxqu" path="res://assets/art/ui/botao_main.png" id="3_v5pi0"]
+[ext_resource type="FontFile" uid="uid://di4blnr4h1xln" path="res://assets/fonts/SpaceMono-Regular.ttf" id="5_csaq8"]
+[ext_resource type="FontFile" uid="uid://dcpb3khwphpen" path="res://assets/fonts/SpaceMono-Bold.ttf" id="6_rw35d"]
+[ext_resource type="Texture2D" uid="uid://lrnu5pdelym4" path="res://assets/art/ui/botao_modal.png" id="7_px486"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cctyv"]
+texture = ExtResource("1_n5dsq")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jen06"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_csaq8"]
+texture = SubResource("AtlasTexture_jen06")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eclvw"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw35d"]
+texture = SubResource("AtlasTexture_eclvw")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfvkn"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_px486"]
+texture = SubResource("AtlasTexture_yfvkn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85fif"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o0a0r"]
+texture = SubResource("AtlasTexture_85fif")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gm0a"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3ie4"]
+texture = SubResource("AtlasTexture_4gm0a")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cius5"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3wlsb"]
+texture = SubResource("AtlasTexture_cius5")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkjnr"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uothp"]
+texture = SubResource("AtlasTexture_bkjnr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0aa8n"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtotc"]
+texture = SubResource("AtlasTexture_0aa8n")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8347"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7g3sk"]
+texture = SubResource("AtlasTexture_m8347")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg8x7"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bujqp"]
+texture = SubResource("AtlasTexture_kg8x7")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tmkl"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bjk0l"]
+texture = SubResource("AtlasTexture_2tmkl")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo3x4"]
+atlas = ExtResource("3_v5pi0")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5d2p"]
+texture = SubResource("AtlasTexture_mo3x4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mq8pi"]
+texture = ExtResource("1_n5dsq")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i44cw"]
+atlas = ExtResource("7_px486")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_epfii"]
+texture = SubResource("AtlasTexture_i44cw")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnpfp"]
+atlas = ExtResource("7_px486")
+region = Rect2(0, 36, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0bs3u"]
+texture = SubResource("AtlasTexture_hnpfp")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x2oe"]
+atlas = ExtResource("7_px486")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nh787"]
+texture = SubResource("AtlasTexture_8x2oe")
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1382056350]
+process_mode = 3
+script = ExtResource("1_5twic")
+
+[node name="FundoEscurecido" type="ColorRect" parent="." unique_id=1051359360]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.627451)
+
+[node name="PainelPausa" type="Panel" parent="." unique_id=981690903]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -65.0
+offset_right = 110.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cctyv")
+
+[node name="LabelTitulo" type="Label" parent="PainelPausa" unique_id=1184815687]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 6.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("2_5twic")
+theme_override_font_sizes/font_size = 12
+text = "Jogo pausado"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotoesPrincipais" type="VBoxContainer" parent="PainelPausa" unique_id=1907779372]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -37.0
+offset_right = 50.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="BotaoContinuar" type="Button" parent="PainelPausa/BotoesPrincipais" unique_id=1050547375]
+custom_minimum_size = Vector2(100, 18)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("2_5twic")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_csaq8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rw35d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_px486")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_o0a0r")
+text = "Continuar"
+icon_alignment = 1
+
+[node name="BotaoComoJogar" type="Button" parent="PainelPausa/BotoesPrincipais" unique_id=2133627938]
+custom_minimum_size = Vector2(100, 18)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("2_5twic")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_m3ie4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3wlsb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uothp")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_qtotc")
+text = "Como Jogar"
+
+[node name="BotaoVoltarMenu" type="Button" parent="PainelPausa/BotoesPrincipais" unique_id=1861679678]
+custom_minimum_size = Vector2(100, 18)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("2_5twic")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_7g3sk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bujqp")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bjk0l")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_y5d2p")
+text = "Voltar ao Menu"
+
+[node name="PainelComoJogar" type="Panel" parent="." unique_id=1986520860]
+visible = false
+custom_minimum_size = Vector2(220, 130)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -65.0
+offset_right = 110.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mq8pi")
+
+[node name="LabelTitulo" type="Label" parent="PainelComoJogar" unique_id=926367264]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 6.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("2_5twic")
+theme_override_font_sizes/font_size = 12
+text = "Como Jogar"
+horizontal_alignment = 1
+
+[node name="TextoInstrucoes" type="RichTextLabel" parent="PainelComoJogar" unique_id=671865233]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/normal_font = ExtResource("5_csaq8")
+theme_override_fonts/bold_font = ExtResource("6_rw35d")
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 8
+bbcode_enabled = true
+text = "Use [b]WASD[/b] ou as [b]setas[/b] para andar.
+Aperte [b]E[/b] para falar e interagir.
+Explore a estação e ajude a resolver os problemas!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotaoFecharComoJogar" type="Button" parent="PainelComoJogar" unique_id=598478168]
+custom_minimum_size = Vector2(40, 18)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("2_5twic")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_epfii")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0bs3u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nh787")
+text = "Fechar"

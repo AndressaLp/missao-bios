@@ -11,8 +11,9 @@ namespace MissaoBios.scripts.UI
     {
         // Caminho temporário: ainda não existe a cena do Hangar/Painel Central.
         // Quando existir, trocar esse caminho.
-        private const string CenaDeJogo = "res://scenes/station/sala_teste.tscn";
+        private const string CenaDeJogo = "res://scenes/station/Hangar.tscn";
 
+        private VBoxContainer _botoesPrincipais;
         private Button _botaoContinuarJogo;
         private Button _botaoSom;
 
@@ -36,6 +37,7 @@ namespace MissaoBios.scripts.UI
         {
             _saveManager = GetNode<SaveManager>("/root/SaveManager");
             _audioManager = GetNode<AudioManager>("/root/AudioManager");
+            _botoesPrincipais = GetNode<VBoxContainer>("BotoesPrincipais");
 
             GetNode<Button>("BotoesPrincipais/BotaoNovoJogo").Pressed += AbrirNovoJogo;
             _botaoContinuarJogo = GetNode<Button>("BotoesPrincipais/BotaoContinuarJogo");
@@ -44,23 +46,35 @@ namespace MissaoBios.scripts.UI
 
             _botaoSom = GetNode<Button>("BotoesSecundarios/BotaoSom");
             _botaoSom.Pressed += AlternarSom;
-            GetNode<Button>("BotoesSecundarios/BotaoComoJogar").Pressed += () => _painelComoJogar.Visible = true;
+            GetNode<Button>("BotoesSecundarios/BotaoComoJogar").Pressed += () => MostrarModal(_painelComoJogar);
 
             _painelNovoJogo = GetNode<Panel>("PainelNovoJogo");
             _campoNome = GetNode<LineEdit>("PainelNovoJogo/CampoNome");
             _botaoMenino = GetNode<Button>("PainelNovoJogo/EscolhaPersonagem/BotaoMenino");
             _botaoMenina = GetNode<Button>("PainelNovoJogo/EscolhaPersonagem/BotaoMenina");
             GetNode<Button>("PainelNovoJogo/BotaoIniciar").Pressed += IniciarNovoJogo;
-            GetNode<Button>("PainelNovoJogo/BotaoVoltarNovoJogo").Pressed += () => _painelNovoJogo.Visible = false;
+            GetNode<Button>("PainelNovoJogo/BotaoVoltarNovoJogo").Pressed += () => EsconderModal(_painelNovoJogo);
 
             _painelEscolherJogador = GetNode<Panel>("PainelEscolherJogador");
             _listaPerfis = GetNode<HBoxContainer>("PainelEscolherJogador/ListaPerfis");
-            GetNode<Button>("PainelEscolherJogador/BotaoVoltarEscolher").Pressed += () => _painelEscolherJogador.Visible = false;
+            GetNode<Button>("PainelEscolherJogador/BotaoVoltarEscolher").Pressed += () => EsconderModal(_painelEscolherJogador);
 
             _painelComoJogar = GetNode<Panel>("PainelComoJogar");
-            GetNode<Button>("PainelComoJogar/BotaoFecharComoJogar").Pressed += () => _painelComoJogar.Visible = false;
+            GetNode<Button>("PainelComoJogar/BotaoFecharComoJogar").Pressed += () => EsconderModal(_painelComoJogar);
 
             AtualizarBotaoContinuar();
+        }
+
+        private void MostrarModal(Control modal)
+        {
+            _botoesPrincipais.Visible = false;
+            modal.Visible = true;
+        }
+
+        private void EsconderModal(Control modal)
+        {
+            modal.Visible = false;
+            _botoesPrincipais.Visible = true;
         }
 
         private void AtualizarBotaoContinuar()
@@ -71,7 +85,7 @@ namespace MissaoBios.scripts.UI
         private void AbrirNovoJogo()
         {
             _campoNome.Text = "";
-            _painelNovoJogo.Visible = true;
+            MostrarModal(_painelNovoJogo);
         }
 
         private void IniciarNovoJogo()
@@ -109,7 +123,7 @@ namespace MissaoBios.scripts.UI
                 _listaPerfis.AddChild(card);
             }
 
-            _painelEscolherJogador.Visible = true;
+            MostrarModal(_painelEscolherJogador);
         }
 
         private void SelecionarPerfil(PerfilJogador perfil)
