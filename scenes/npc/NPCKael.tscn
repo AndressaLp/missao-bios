@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://ck4k36p12ht1y"]
+
+[ext_resource type="Script" uid="uid://bwu5whxxwrbou" path="res://scripts/NPC/NPCController.cs" id="1_it428"]
+[ext_resource type="Texture2D" uid="uid://cv7qn5plwbnjt" path="res://assets/art/characters/npc.png" id="2_ywlsm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lxvh"]
+atlas = ExtResource("2_ywlsm")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6yrjw"]
+atlas = ExtResource("2_ywlsm")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcgxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lxvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6yrjw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uevog"]
+size = Vector2(28, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywlsm"]
+size = Vector2(23, 16)
+
+[node name="NPCKael" type="Area2D" unique_id=990429205]
+script = ExtResource("1_it428")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=115683397]
+sprite_frames = SubResource("SpriteFrames_tcgxc")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.8972528
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1195476911]
+position = Vector2(-0.5, 9)
+shape = SubResource("RectangleShape2D_uevog")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1419391663]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=619236467]
+position = Vector2(-0.5, 13)
+shape = SubResource("RectangleShape2D_ywlsm")
