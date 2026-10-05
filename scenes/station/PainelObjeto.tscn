@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://n5l0smglv3gy"]
+
+[ext_resource type="Script" uid="uid://bjw2yatqpfoaa" path="res://scripts/Interaction/PainelCentralInteract.cs" id="1_4ppni"]
+
+[sub_resource type="Gradient" id="Gradient_lg3a7"]
+offsets = PackedFloat32Array(0.8852041)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_4ppni"]
+gradient = SubResource("Gradient_lg3a7")
+width = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ppni"]
+size = Vector2(100, 50)
+
+[node name="PainelObjeto" type="Area2D" unique_id=983734225]
+script = ExtResource("1_4ppni")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=104507608]
+scale = Vector2(100, 50)
+texture = SubResource("GradientTexture1D_4ppni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=832601245]
+visible = false
+shape = SubResource("RectangleShape2D_4ppni")

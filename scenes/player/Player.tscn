@@ -3,6 +3,26 @@
 [ext_resource type="Script" uid="uid://cm5vgs6ertjcd" path="res://scripts/Player/PlayerController.cs" id="1_gfjak"]
 [ext_resource type="SpriteFrames" uid="uid://cxckkd2aeg55v" path="res://resources/menino_frames.tres" id="2_gfjak"]
 [ext_resource type="SpriteFrames" uid="uid://b8vorcxm7sv1c" path="res://resources/menina_frames.tres" id="3_4kuee"]
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="4_524rm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kuee"]
+size = Vector2(23, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tpg5x"]
+radius = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3xxp"]
+bg_color = Color(0.22352941, 0.22745098, 0.28627452, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="Player" type="CharacterBody2D" unique_id=1491165222]
 script = ExtResource("1_gfjak")
@@ -10,9 +30,29 @@ FramesMenino = ExtResource("2_gfjak")
 FramesMenina = ExtResource("3_4kuee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=130420667]
+position = Vector2(-0.5, 16)
+shape = SubResource("RectangleShape2D_4kuee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1926772204]
 sprite_frames = ExtResource("2_gfjak")
 animation = &"idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1490948824]
+
+[node name="RaioInteracao" type="Area2D" parent="." unique_id=1857826547]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RaioInteracao" unique_id=1783317388]
+shape = SubResource("CircleShape2D_tpg5x")
+
+[node name="PromptInteragir" type="Label" parent="." unique_id=1058106925]
+visible = false
+offset_left = 10.0
+offset_top = -35.0
+offset_right = 26.0
+offset_bottom = -19.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_524rm")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_c3xxp")
+text = "  E"
+vertical_alignment = 1
