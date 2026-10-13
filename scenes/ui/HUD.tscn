@@ -1,0 +1,179 @@
+[gd_scene format=3 uid="uid://dm7gad7ofxncu"]
+
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="1_6ll6g"]
+[ext_resource type="Script" uid="uid://bo0aepchil0jd" path="res://scripts/UI/HUDController.cs" id="1_ig75s"]
+[ext_resource type="FontFile" uid="uid://di4blnr4h1xln" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_ig75s"]
+[ext_resource type="Texture2D" uid="uid://jt5dn1qug0s5" path="res://assets/art/ui/botao_menor.png" id="3_4ed8p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ed8p"]
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig75s"]
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+
+[sub_resource type="Theme" id="Theme_4ed8p"]
+VScrollBar/icons/decrement = null
+VScrollBar/icons/decrement_highlight = null
+VScrollBar/icons/decrement_pressed = null
+VScrollBar/icons/increment = null
+VScrollBar/icons/increment_highlight = null
+VScrollBar/icons/increment_pressed = null
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_4ed8p")
+VScrollBar/styles/grabber_highlight = null
+VScrollBar/styles/grabber_pressed = null
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_ig75s")
+VScrollBar/styles/scroll_focus = null
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_440sr"]
+atlas = ExtResource("3_4ed8p")
+region = Rect2(0, 0, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jvmx1"]
+texture = SubResource("AtlasTexture_440sr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2g00v"]
+atlas = ExtResource("3_4ed8p")
+region = Rect2(0, 22, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_euikm"]
+texture = SubResource("AtlasTexture_2g00v")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8gin"]
+atlas = ExtResource("3_4ed8p")
+region = Rect2(22, 0, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4k5r"]
+texture = SubResource("AtlasTexture_b8gin")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyxbt"]
+atlas = ExtResource("3_4ed8p")
+region = Rect2(0, 0, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rnyu1"]
+texture = SubResource("AtlasTexture_fyxbt")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wijvn"]
+atlas = ExtResource("3_4ed8p")
+region = Rect2(0, 22, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jlufg"]
+texture = SubResource("AtlasTexture_wijvn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wutp8"]
+atlas = ExtResource("3_4ed8p")
+region = Rect2(22, 0, 22, 22)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l20r4"]
+texture = SubResource("AtlasTexture_wutp8")
+
+[node name="HUD" type="CanvasLayer" unique_id=1589068247]
+script = ExtResource("1_ig75s")
+
+[node name="LabelNomeJogador" type="Label" parent="." unique_id=373369285]
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 55.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("1_6ll6g")
+theme_override_font_sizes/font_size = 10
+
+[node name="PainelMissoes" type="Panel" parent="." unique_id=1353424825]
+clip_contents = true
+offset_left = 4.0
+offset_top = 16.0
+offset_right = 84.0
+offset_bottom = 71.0
+
+[node name="LabelTitulo" type="Label" parent="PainelMissoes" unique_id=913074134]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 44.0
+offset_bottom = 10.0
+theme_override_fonts/font = ExtResource("1_6ll6g")
+theme_override_font_sizes/font_size = 7
+text = "Missões"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PainelMissoes" unique_id=1323705826]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4ed8p")
+horizontal_scroll_mode = 0
+
+[node name="LabelMissoes" type="Label" parent="PainelMissoes/ScrollContainer" unique_id=312586877]
+clip_contents = true
+custom_minimum_size = Vector2(72, 45)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 10
+theme_override_constants/line_spacing = -1
+theme_override_fonts/font = ExtResource("2_ig75s")
+theme_override_font_sizes/font_size = 5
+autowrap_mode = 3
+
+[node name="BotoesSecundarios" type="VBoxContainer" parent="." unique_id=292484251]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -27.0
+offset_right = -5.0
+offset_bottom = 60.0
+grow_horizontal = 0
+alignment = 1
+
+[node name="BotaoSom" type="Button" parent="BotoesSecundarios" unique_id=1608783159]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxTexture_jvmx1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_euikm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_p4k5r")
+text = "🔊"
+
+[node name="BotaoPausa" type="Button" parent="BotoesSecundarios" unique_id=1895288013]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+mouse_default_cursor_shape = 16
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_6ll6g")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("StyleBoxTexture_rnyu1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jlufg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l20r4")
+text = "  ☰"
+alignment = 0
+icon_alignment = 1
+
+[node name="InventarioContainer" type="HBoxContainer" parent="." unique_id=905086296]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -25.0
+offset_right = 34.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="SlotItem1" type="Panel" parent="InventarioContainer" unique_id=754881975]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="SlotItem2" type="Panel" parent="InventarioContainer" unique_id=212562930]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="SlotItem3" type="Panel" parent="InventarioContainer" unique_id=1979068162]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2

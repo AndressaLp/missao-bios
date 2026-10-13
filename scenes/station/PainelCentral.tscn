@@ -1,0 +1,147 @@
+[gd_scene format=4 uid="uid://fdmt2vcugv4y"]
+
+[ext_resource type="Texture2D" uid="uid://datpmkn2osp3v" path="res://assets/art/environments/estacao_geral/piso_estacao.png" id="1_tjn0h"]
+[ext_resource type="Texture2D" uid="uid://bdoqu85oppd1x" path="res://assets/art/environments/estacao_geral/parede_estacao.png" id="2_8lri3"]
+[ext_resource type="Texture2D" uid="uid://bo6b2fgq3jl26" path="res://assets/art/environments/estacao_geral/janela_estacao.png" id="3_8lri3"]
+[ext_resource type="PackedScene" uid="uid://bt0umcffjp105" path="res://scenes/player/Player.tscn" id="3_gx8gt"]
+[ext_resource type="PackedScene" uid="uid://dm7gad7ofxncu" path="res://scenes/ui/HUD.tscn" id="4_3h1sa"]
+[ext_resource type="PackedScene" uid="uid://n5l0smglv3gy" path="res://scenes/station/PainelObjeto.tscn" id="4_gx8gt"]
+[ext_resource type="PackedScene" uid="uid://b5770wv3gpeqm" path="res://scenes/station/Door.tscn" id="5_nb7re"]
+[ext_resource type="PackedScene" uid="uid://ck4k36p12ht1y" path="res://scenes/npc/NPCKael.tscn" id="6_it5oc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gx8gt"]
+texture = ExtResource("1_tjn0h")
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_57sak"]
+tile_size = Vector2i(27, 27)
+sources/1 = SubResource("TileSetAtlasSource_gx8gt")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3h1sa"]
+texture = ExtResource("2_8lri3")
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_22htb"]
+tile_size = Vector2i(27, 27)
+sources/3 = SubResource("TileSetAtlasSource_3h1sa")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nb7re"]
+texture = ExtResource("3_8lri3")
+texture_region_size = Vector2i(60, 30)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3h1sa"]
+tile_size = Vector2i(10, 10)
+sources/0 = SubResource("TileSetAtlasSource_nb7re")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh3oe"]
+size = Vector2(192, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krqjx"]
+size = Vector2(190, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxl82"]
+size = Vector2(330, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_japsh"]
+size = Vector2(130, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_naaeb"]
+size = Vector2(110, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3o4p"]
+size = Vector2(130, 82)
+
+[node name="PainelCentral" type="Node2D" unique_id=1860493674]
+
+[node name="TileMapChao" type="TileMapLayer" parent="." unique_id=175337951]
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAAAAAABAAAAAQAAAAAAAAACAAAAAQAAAAAAAAADAAAAAQAAAAAAAAAEAAAAAQAAAAAAAAAFAAAAAQAAAAAAAAAGAAAAAQAAAAAAAAAHAAAAAQAAAAAAAAAIAAAAAQAAAAAAAAAJAAAAAQAAAAAAAAAJAAEAAQAAAAAAAAAIAAEAAQAAAAAAAAAHAAEAAQAAAAAAAAAGAAEAAQAAAAAAAAAFAAEAAQAAAAAAAAAEAAEAAQAAAAAAAAADAAEAAQAAAAAAAAACAAEAAQAAAAAAAAABAAEAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAABAAIAAQAAAAAAAAACAAIAAQAAAAAAAAADAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAFAAIAAQAAAAAAAAAGAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAIAAIAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAMAAQAAAAAAAAAIAAMAAQAAAAAAAAAHAAMAAQAAAAAAAAAGAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAADAAMAAQAAAAAAAAACAAMAAQAAAAAAAAABAAMAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAIAAUAAQAAAAAAAAAHAAUAAQAAAAAAAAAGAAUAAQAAAAAAAAAFAAUAAQAAAAAAAAAEAAUAAQAAAAAAAAADAAUAAQAAAAAAAAACAAUAAQAAAAAAAAABAAUAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAYAAQAAAAAAAAACAAYAAQAAAAAAAAADAAYAAQAAAAAAAAAEAAYAAQAAAAAAAAAFAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAAJAAYAAQAAAAAAAAAKAAAAAQAAAAAAAAALAAAAAQAAAAAAAAALAAEAAQAAAAAAAAALAAIAAQAAAAAAAAALAAMAAQAAAAAAAAALAAQAAQAAAAAAAAALAAUAAQAAAAAAAAALAAYAAQAAAAAAAAAKAAYAAQAAAAAAAAAKAAUAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAIAAQAAAAAAAAAKAAEAAQAAAAAAAAAFAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAAHAAcAAQAAAAAAAAAEAAcAAQAAAAAAAAAEAAgAAQAAAAAAAAAFAAgAAQAAAAAAAAAGAAgAAQAAAAAAAAAHAAgAAQAAAAAAAAAHAAkAAQAAAAAAAAAGAAkAAQAAAAAAAAAFAAkAAQAAAAAAAAAEAAkAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_57sak")
+
+[node name="TileMapParede" type="TileMapLayer" parent="." unique_id=1147070715]
+tile_map_data = PackedByteArray("AAAAAP//AwAAAAEAAAABAP//AwAAAAEAAAACAP//AwAAAAEAAAADAP//AwAAAAEAAAAEAP//AwAAAAEAAAAFAP//AwAAAAEAAAAGAP//AwAAAAEAAAAHAP//AwAAAAEAAAAIAP//AwAAAAEAAAAJAP//AwAAAAEAAAAKAP//AwAAAAEAAAALAP//AwAAAAEAAAAAAP7/AwABAAAAAAABAP7/AwABAAAAAAACAP7/AwABAAAAAAADAP7/AwABAAAAAAAEAP7/AwABAAAAAAAFAP7/AwABAAAAAAAGAP7/AwABAAAAAAAHAP7/AwABAAAAAAAIAP7/AwABAAAAAAAJAP7/AwABAAAAAAAKAP7/AwABAAAAAAALAP7/AwABAAAAAAAAAP3/AwAAAAAAAAABAP3/AwAAAAAAAAACAP3/AwAAAAAAAAADAP3/AwAAAAAAAAAEAP3/AwAAAAAAAAAFAP3/AwAAAAAAAAAGAP3/AwAAAAAAAAAHAP3/AwAAAAAAAAAIAP3/AwAAAAAAAAAJAP3/AwAAAAAAAAAKAP3/AwAAAAAAAAALAP3/AwAAAAAAAAA=")
+tile_set = SubResource("TileSet_22htb")
+
+[node name="TileMapJanela" type="TileMapLayer" parent="." unique_id=119578702]
+tile_map_data = PackedByteArray("AAADAPr/AAAAAAEAAAAaAPv/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_3h1sa")
+
+[node name="ParedeEsquerda" type="StaticBody2D" parent="." unique_id=475744167]
+visible = false
+position = Vector2(-10, 94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda" unique_id=1022953240]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_vh3oe")
+debug_color = Color(0.2166667, 1, 0, 1)
+
+[node name="ParedeDireita" type="StaticBody2D" parent="." unique_id=1646297463]
+visible = false
+position = Vector2(334, 94)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita" unique_id=1464888472]
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_krqjx")
+debug_color = Color(0.31666672, 1, 0, 1)
+
+[node name="ParedeTopo" type="StaticBody2D" parent="." unique_id=2014946775]
+visible = false
+position = Vector2(162, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeTopo" unique_id=1393437409]
+shape = SubResource("RectangleShape2D_xxl82")
+debug_color = Color(0.069299996, 0.99, 0.14602493, 1)
+
+[node name="ParedeBaseE" type="StaticBody2D" parent="." unique_id=1460830077]
+visible = false
+position = Vector2(44, 203)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBaseE" unique_id=282791815]
+position = Vector2(3.8146973e-06, 26)
+rotation = 3.1415925
+shape = SubResource("RectangleShape2D_japsh")
+debug_color = Color(0.31666672, 1, 0, 1)
+
+[node name="ParedeBase" type="StaticBody2D" parent="." unique_id=207217991]
+position = Vector2(162, 260)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBase" unique_id=1890194146]
+shape = SubResource("RectangleShape2D_naaeb")
+debug_color = Color(0, 1, 0.14999986, 1)
+
+[node name="ParedeBaseD" type="StaticBody2D" parent="." unique_id=1358366647]
+visible = false
+position = Vector2(280, 203)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBaseD" unique_id=1730451501]
+position = Vector2(0, 26)
+rotation = -3.1415925
+shape = SubResource("RectangleShape2D_b3o4p")
+debug_color = Color(0, 1, 0.14999986, 1)
+
+[node name="PainelObjeto" parent="." unique_id=983734225 instance=ExtResource("4_gx8gt")]
+position = Vector2(162, -35)
+
+[node name="Door" parent="." unique_id=860997374 instance=ExtResource("5_nb7re")]
+position = Vector2(162, 238)
+CenaDestino = "uid://bhutu3fbb2a2d"
+PontoDeEntradaId = "SpawnPortaNorte"
+
+[node name="Player" parent="." unique_id=1491165222 instance=ExtResource("3_gx8gt")]
+position = Vector2(162.5, 175)
+
+[node name="NPCKael" parent="." unique_id=990429205 instance=ExtResource("6_it5oc")]
+position = Vector2(217, 75)
+DialogoId = "kael_painel"
+
+[node name="HUD" parent="." unique_id=1589068247 instance=ExtResource("4_3h1sa")]
+
+[node name="SpawnPortaSul" type="Marker2D" parent="." unique_id=905093639]
+position = Vector2(162, 182)

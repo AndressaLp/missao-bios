@@ -59,3 +59,51 @@ As decisões do jogador influenciam o progresso da estação, representado por u
 ## 💻 Plataforma
 
 - Web (navegador)
+
+
+---
+
+## 🛠️ Como rodar localmente
+
+### Pré-requisitos
+
+- [Godot 4.6 **.NET**](https://godotengine.org/download) (a versão com suporte a C#, não a padrão)
+- [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0)
+
+### Passo a passo
+
+1. Clone o repositório e abra a pasta no Godot (`Importar` → selecione o `project.godot`).
+2. Clique em **Build** (ícone de martelo, canto superior direito) pra compilar os scripts C#.
+3. Aperte **F5** pra jogar. A cena inicial é o menu principal.
+
+### Controles
+
+| Ação | Teclas |
+|---|---|
+| Mover | Setas ou `W` `A` `S` `D` |
+| Interagir | `E` |
+| Pausar / voltar | `Esc` |
+
+---
+
+## 📁 Estrutura do projeto
+
+```
+missao-bios/
+├── scenes/      # cenas do Godot (menu, estação, jogador, NPCs e interfaces)
+├── scripts/     # código C# (Managers, Player, NPC, Interaction, Puzzle, UI, Audio, Save)
+├── resources/   # recursos do Godot (animações dos personagens)
+├── data/        # dados do jogo (ex.: microrganismosDB.json)
+└── docs/        # GDD e validação de demanda
+```
+
+Os gerenciadores em `scripts/Managers` são autoloads (singletons) registrados no `project.godot`.
+
+---
+
+## 🔀 Fluxo de trabalho
+
+- `main`: versão estável
+- `dev`: integração do que está em desenvolvimento
+- `feature/*`: uma branch por tarefa, aberta a partir da `dev`
+- As Pull Requests entram na `dev`

@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://xnd4238fbun2"]
+
+[ext_resource type="Script" uid="uid://dqg0dkohkdgto" path="res://scripts/UI/PainelCentralUI.cs" id="1_ln63w"]
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="1_mkivt"]
+[ext_resource type="FontFile" uid="uid://di4blnr4h1xln" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_ln63w"]
+
+[node name="PainelCentralUI" type="CanvasLayer" unique_id=977410622]
+process_mode = 3
+visible = false
+script = ExtResource("1_ln63w")
+
+[node name="Painel" type="Panel" parent="." unique_id=336580306]
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.0
+offset_top = -65.0
+offset_right = 110.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelTitulo" type="Label" parent="Painel" unique_id=1723092963]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 5.0
+offset_bottom = 19.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_mkivt")
+theme_override_font_sizes/font_size = 12
+text = "Painel Central da Estação"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelProgresso" type="Label" parent="Painel" unique_id=1532062656]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 25.0
+offset_bottom = 37.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ln63w")
+theme_override_font_sizes/font_size = 8
+text = "Progresso da Estação"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarraProgresso" type="ProgressBar" parent="Painel" unique_id=215134381]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -25.0
+offset_right = 100.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_mkivt")
+theme_override_font_sizes/font_size = 12
+
+[node name="LabelBancoDados" type="Label" parent="Painel" unique_id=464155824]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -62.5
+offset_top = 60.0
+offset_right = 62.5
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ln63w")
+theme_override_font_sizes/font_size = 8
+text = "Banco de Dados: nenhuma descoberta ainda"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelRelatorio" type="Label" parent="Painel" unique_id=893775029]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -57.0
+offset_top = 85.0
+offset_right = 57.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_ln63w")
+theme_override_font_sizes/font_size = 8
+text = "Relatório Final: disponível ao fim da missão"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 162
+
+[node name="BotaoFechar" type="Button" parent="Painel" unique_id=446676739]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -25.0
+offset_right = 30.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_mkivt")
+theme_override_font_sizes/font_size = 10
+text = "Fechar"
