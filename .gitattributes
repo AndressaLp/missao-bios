@@ -1,0 +1,3 @@
+# Normaliza o fim de linha de todos os arquivos de texto (evita diffs de CRLF/LF
+# entre quem trabalha no Windows e no Linux/macOS).
+* text=auto eol=lf
