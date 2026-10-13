@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Godot;
 
 namespace MissaoBios.scripts.Puzzle
 {
@@ -27,7 +28,7 @@ namespace MissaoBios.scripts.Puzzle
 
         public void TestarMetodo(MetodoLaboratorio metodo)
         {
-            _amostra.foiTestada = true;
+            _amostra.FoiTestada = true;
 
             var reacao = _reacaoService.AplicarMetodo(_amostra, metodo);
             GD.Print("testando: " + metodo);
