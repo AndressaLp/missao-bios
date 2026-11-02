@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://jakyv4iwjnmv"]
+
+[ext_resource type="Script" uid="uid://dpj3hkh85r22t" path="res://scripts/Interaction/MicroscopioInteract.cs" id="1_wgavw"]
+[ext_resource type="Texture2D" uid="uid://uc8pmg1r2q5l" path="res://assets/art/environments/laboratorio/microscopio.png" id="2_mtu4n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csypt"]
+size = Vector2(35, 35)
+
+[node name="Microscopio" type="Area2D" unique_id=348411080]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_wgavw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=679693588]
+texture = ExtResource("2_mtu4n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1692593217]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_csypt")
+debug_color = Color(0, 0.5950001, 0.7, 0.94509804)

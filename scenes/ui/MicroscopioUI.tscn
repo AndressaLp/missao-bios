@@ -1,0 +1,559 @@
+[gd_scene format=3 uid="uid://b3t3kfqtpdyjh"]
+
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="1_aogve"]
+[ext_resource type="Script" uid="uid://cnvacwmiljajh" path="res://scripts/UI/MicroscopioUI.cs" id="1_pjx2b"]
+[ext_resource type="FontFile" uid="uid://di4blnr4h1xln" path="res://assets/fonts/SpaceMono-Regular.ttf" id="2_pjx2b"]
+[ext_resource type="FontFile" uid="uid://dcpb3khwphpen" path="res://assets/fonts/SpaceMono-Bold.ttf" id="3_mcpss"]
+[ext_resource type="Texture2D" uid="uid://lrnu5pdelym4" path="res://assets/art/ui/botao_modal.png" id="3_mug51"]
+[ext_resource type="Texture2D" uid="uid://t5dlxoxi6jup" path="res://assets/art/ui/card.png" id="4_s3t6x"]
+[ext_resource type="Texture2D" uid="uid://de8hdpt5u6wcq" path="res://assets/art/ui/modal.png" id="4_t14vu"]
+[ext_resource type="Texture2D" uid="uid://bukqas48hyxqu" path="res://assets/art/ui/botao_main.png" id="5_mug51"]
+
+[sub_resource type="Gradient" id="Gradient_pjx2b"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_mcpss"]
+gradient = SubResource("Gradient_pjx2b")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mug51"]
+texture = SubResource("GradientTexture1D_mcpss")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2eojn"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(0, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_68qg3"]
+texture = SubResource("AtlasTexture_2eojn")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjjm8"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(0, 55, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yt1or"]
+texture = SubResource("AtlasTexture_gjjm8")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5h3t"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(50, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o4iby"]
+texture = SubResource("AtlasTexture_j5h3t")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pairi"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(50, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yr0tr"]
+texture = SubResource("AtlasTexture_pairi")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui1am"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(0, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pairi"]
+texture = SubResource("AtlasTexture_ui1am")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr0tr"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(0, 55, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_npdm8"]
+texture = SubResource("AtlasTexture_yr0tr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idx1s"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(50, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ga44f"]
+texture = SubResource("AtlasTexture_idx1s")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npdm8"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(50, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idx1s"]
+texture = SubResource("AtlasTexture_npdm8")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcr65"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(0, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3oll"]
+texture = SubResource("AtlasTexture_gcr65")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs0ek"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(0, 55, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4foco"]
+texture = SubResource("AtlasTexture_cs0ek")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h87n"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(50, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lpmlk"]
+texture = SubResource("AtlasTexture_6h87n")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ll3m"]
+atlas = ExtResource("4_s3t6x")
+region = Rect2(50, 0, 50, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3wat"]
+texture = SubResource("AtlasTexture_6ll3m")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ga44f"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gcr65"]
+texture = SubResource("AtlasTexture_ga44f")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3oll"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 36, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cs0ek"]
+texture = SubResource("AtlasTexture_k3oll")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4foco"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6h87n"]
+texture = SubResource("AtlasTexture_4foco")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t14vu"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3t6x"]
+texture = SubResource("AtlasTexture_t14vu")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afgj5"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 36, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lb5ko"]
+texture = SubResource("AtlasTexture_afgj5")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18i6c"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2ba44"]
+texture = SubResource("AtlasTexture_18i6c")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjx2b"]
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1i7b"]
+atlas = ExtResource("4_t14vu")
+region = Rect2(0, 0, 220, 130)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2eojn"]
+texture = SubResource("AtlasTexture_l1i7b")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3t6x"]
+atlas = ExtResource("5_mug51")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_afgj5"]
+texture = SubResource("AtlasTexture_s3t6x")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb5ko"]
+atlas = ExtResource("5_mug51")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_18i6c"]
+texture = SubResource("AtlasTexture_lb5ko")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ba44"]
+atlas = ExtResource("5_mug51")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l1i7b"]
+texture = SubResource("AtlasTexture_2ba44")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68qg3"]
+atlas = ExtResource("5_mug51")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjjm8"]
+texture = SubResource("AtlasTexture_68qg3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yt1or"]
+atlas = ExtResource("5_mug51")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5h3t"]
+texture = SubResource("AtlasTexture_yt1or")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4iby"]
+atlas = ExtResource("5_mug51")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ui1am"]
+texture = SubResource("AtlasTexture_o4iby")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpmlk"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ll3m"]
+texture = SubResource("AtlasTexture_lpmlk")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3wat"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 36, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rvrnx"]
+texture = SubResource("AtlasTexture_v3wat")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okvi2"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h5ktb"]
+texture = SubResource("AtlasTexture_okvi2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2cj4"]
+atlas = ExtResource("3_mug51")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iytib"]
+texture = SubResource("AtlasTexture_y2cj4")
+
+[node name="MicroscopioUI" type="CanvasLayer" unique_id=1424510002]
+process_mode = 3
+script = ExtResource("1_pjx2b")
+
+[node name="Painel" type="Panel" parent="." unique_id=1440381885]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mug51")
+
+[node name="TelaSelecao" type="Control" parent="Painel" unique_id=1768772391]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelTitulo" type="Label" parent="Painel/TelaSelecao" unique_id=1219823030]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 15.0
+offset_bottom = 29.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_aogve")
+theme_override_font_sizes/font_size = 12
+text = "Escolha uma amostra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BotaoAmostra1" type="Button" parent="Painel/TelaSelecao" unique_id=902573823]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = -32.5
+offset_right = 90.0
+offset_bottom = 32.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("3_mcpss")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_68qg3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yt1or")
+theme_override_styles/hover = SubResource("StyleBoxTexture_o4iby")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_yr0tr")
+autowrap_mode = 3
+
+[node name="BotaoAmostra2" type="Button" parent="Painel/TelaSelecao" unique_id=1240557964]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.5
+offset_top = -32.5
+offset_right = 32.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("3_mcpss")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_pairi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_npdm8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ga44f")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_idx1s")
+autowrap_mode = 3
+
+[node name="BotaoAmostra3" type="Button" parent="Painel/TelaSelecao" unique_id=1287372182]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -32.5
+offset_right = -25.0
+offset_bottom = 32.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("3_mcpss")
+theme_override_font_sizes/font_size = 8
+theme_override_styles/normal = SubResource("StyleBoxTexture_k3oll")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4foco")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lpmlk")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_v3wat")
+autowrap_mode = 3
+
+[node name="BotaoFechar" type="Button" parent="Painel/TelaSelecao" unique_id=762802847]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_aogve")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_gcr65")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cs0ek")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6h87n")
+text = " Fechar"
+
+[node name="TelaDescricao" type="Control" parent="Painel" unique_id=746409128]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotaoVoltar" type="Button" parent="Painel/TelaDescricao" unique_id=326298227]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 47.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_aogve")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_s3t6x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lb5ko")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2ba44")
+text = " Voltar"
+autowrap_mode = 3
+icon_alignment = 1
+
+[node name="FundoLente" type="Panel" parent="Painel/TelaDescricao" unique_id=536899758]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 30.0
+offset_right = 280.0
+offset_bottom = 145.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pjx2b")
+
+[node name="ImagemMicrorganismo" type="TextureRect" parent="Painel/TelaDescricao/FundoLente" unique_id=1679057578]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -37.5
+offset_right = 37.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PainelInfo" type="Panel" parent="Painel/TelaDescricao" unique_id=1675204598]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 32.0
+offset_right = 122.0
+offset_bottom = 102.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2eojn")
+
+[node name="LabelNome" type="Label" parent="Painel/TelaDescricao/PainelInfo" unique_id=905216686]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = -5.0
+offset_bottom = 13.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("1_aogve")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 3
+
+[node name="LabelDescricao" type="Label" parent="Painel/TelaDescricao/PainelInfo" unique_id=1592614581]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = -57.0
+offset_right = -7.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("2_pjx2b")
+theme_override_font_sizes/font_size = 5
+autowrap_mode = 3
+
+[node name="BotaoOpcao1" type="Button" parent="Painel/TelaDescricao" unique_id=184180841]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = 17.0
+offset_right = 122.0
+offset_bottom = 35.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_focus_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("2_pjx2b")
+theme_override_font_sizes/font_size = 5
+theme_override_styles/normal = SubResource("StyleBoxTexture_afgj5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_18i6c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l1i7b")
+theme_override_styles/focus = SubResource("StyleBoxTexture_gjjm8")
+
+[node name="BotaoOpcao2" type="Button" parent="Painel/TelaDescricao" unique_id=432906378]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = 40.0
+offset_right = 122.0
+offset_bottom = 58.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_focus_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("2_pjx2b")
+theme_override_font_sizes/font_size = 5
+theme_override_styles/normal = SubResource("StyleBoxTexture_afgj5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_18i6c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l1i7b")
+theme_override_styles/focus = SubResource("StyleBoxTexture_j5h3t")
+
+[node name="BotaoOpcao3" type="Button" parent="Painel/TelaDescricao" unique_id=996409980]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = 63.0
+offset_right = 122.0
+offset_bottom = 81.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_focus_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("2_pjx2b")
+theme_override_font_sizes/font_size = 5
+theme_override_styles/normal = SubResource("StyleBoxTexture_afgj5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_18i6c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l1i7b")
+theme_override_styles/focus = SubResource("StyleBoxTexture_ui1am")
+
+[node name="PainelKael" type="Panel" parent="Painel/TelaDescricao" unique_id=443120215]
+visible = false
+clip_contents = true
+layout_mode = 0
+offset_left = 129.0
+offset_top = 121.0
+offset_right = 313.0
+offset_bottom = 171.0
+
+[node name="LabelKael" type="Label" parent="Painel/TelaDescricao/PainelKael" unique_id=1773437679]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -8.5
+offset_right = 87.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_mcpss")
+theme_override_font_sizes/font_size = 4
+autowrap_mode = 3
+
+[node name="BotaoDica" type="Button" parent="Painel/TelaDescricao" unique_id=534348299]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 7.0
+offset_right = 92.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_aogve")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ll3m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rvrnx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h5ktb")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_iytib")
+text = "Dica(3)"

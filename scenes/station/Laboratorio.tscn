@@ -1,0 +1,193 @@
+[gd_scene format=4 uid="uid://dwbi2lqbdt7ll"]
+
+[ext_resource type="Texture2D" uid="uid://datpmkn2osp3v" path="res://assets/art/environments/estacao_geral/piso_estacao.png" id="1_ofw5w"]
+[ext_resource type="Script" uid="uid://bgk0l8if5ne2o" path="res://scripts/Interaction/SalaMissao.cs" id="1_ogp1w"]
+[ext_resource type="Texture2D" uid="uid://bdoqu85oppd1x" path="res://assets/art/environments/estacao_geral/parede_estacao.png" id="2_c4m8q"]
+[ext_resource type="Texture2D" uid="uid://bo6b2fgq3jl26" path="res://assets/art/environments/estacao_geral/janela_estacao.png" id="3_c6yh5"]
+[ext_resource type="PackedScene" uid="uid://ck4k36p12ht1y" path="res://scenes/npc/NPCKael.tscn" id="4_wag7q"]
+[ext_resource type="Texture2D" uid="uid://cu0kel5v4ex1" path="res://assets/art/environments/laboratorio/lab_items.png" id="5_17iyb"]
+[ext_resource type="PackedScene" uid="uid://jakyv4iwjnmv" path="res://scenes/station/Microscopio.tscn" id="5_c6yh5"]
+[ext_resource type="PackedScene" uid="uid://bt0umcffjp105" path="res://scenes/player/Player.tscn" id="5_ogp1w"]
+[ext_resource type="PackedScene" uid="uid://dm7gad7ofxncu" path="res://scenes/ui/HUD.tscn" id="6_17iyb"]
+[ext_resource type="PackedScene" uid="uid://b5770wv3gpeqm" path="res://scenes/station/Door.tscn" id="7_c4m8q"]
+[ext_resource type="Script" uid="uid://1yi6nhs0lxcs" path="res://scripts/NPC/NPCKaelLaboratorio.cs" id="8_wag7q"]
+[ext_resource type="PackedScene" uid="uid://bp7t8jf8unvuu" path="res://scenes/station/PontoIngrediente.tscn" id="12_lugta"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lugta"]
+texture = ExtResource("1_ofw5w")
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2rfaq"]
+tile_size = Vector2i(27, 27)
+sources/1 = SubResource("TileSetAtlasSource_lugta")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ks3gl"]
+texture = ExtResource("2_c4m8q")
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_me8hk"]
+tile_size = Vector2i(27, 27)
+sources/3 = SubResource("TileSetAtlasSource_ks3gl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iip40"]
+texture = ExtResource("3_c6yh5")
+texture_region_size = Vector2i(60, 30)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7lgpo"]
+tile_size = Vector2i(6, 6)
+sources/0 = SubResource("TileSetAtlasSource_iip40")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_17iyb"]
+texture = ExtResource("5_17iyb")
+texture_region_size = Vector2i(40, 40)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20, -10, 20, -10, 19.847769, 20.108925, -19.673668, 20.108925)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20, -10, 20, -10, 19.847769, 20.108925, -19.673668, 20.108925)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20, -10, 20, -10, 19.847769, 20.108925, -19.673668, 20.108925)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.881454, 12.88364, -0.60935974, 15.843395, 11.055557, 12.7095375, 8.618111, -0.34820557, 11.751968, -5.91951, 8.444008, -12.709537, -9.662727, -12.709537, -11.577866, -5.3971996, -8.792213, -0.52230835)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20, -10, 20, -10, 20.021872, 19.934822, -19.902363, 20.036612)
+1:2/0 = 0
+1:2/0/z_index = 1
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.8727036, 11.490814, 12.100174, 11.664917, 17.671478, 10, 16.452759, 0.69641304, 14.711723, -6.615923, -0.60935974, -7.312336, -6.5288696, -1.9151344, -16.975067, -0.69641304, -18.019684, 11.664917)
+
+[sub_resource type="TileSet" id="TileSet_ks3gl"]
+tile_size = Vector2i(40, 20)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_17iyb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psvq1"]
+size = Vector2(120, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njkqi"]
+size = Vector2(195, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xi1r"]
+size = Vector2(330, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yaw3"]
+size = Vector2(73, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx4r1"]
+size = Vector2(50, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rafh0"]
+size = Vector2(330, 20)
+
+[node name="Laboratorio" type="Node2D" unique_id=1227798328]
+script = ExtResource("1_ogp1w")
+MissaoConcluirAoEntrar = "ir_laboratorio"
+
+[node name="TileMapChao" type="TileMapLayer" parent="." unique_id=889703090]
+tile_map_data = PackedByteArray("AAAAAAIAAQAAAAAAAAABAAIAAQAAAAAAAAACAAIAAQAAAAAAAAADAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAFAAIAAQAAAAAAAAAGAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAAAAAAHAAMAAQAAAAAAAAAGAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAADAAMAAQAAAAAAAAACAAMAAQAAAAAAAAABAAMAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAHAAUAAQAAAAAAAAAGAAUAAQAAAAAAAAAFAAUAAQAAAAAAAAAEAAUAAQAAAAAAAAADAAUAAQAAAAAAAAACAAUAAQAAAAAAAAABAAUAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAYAAQAAAAAAAAACAAYAAQAAAAAAAAADAAYAAQAAAAAAAAAEAAYAAQAAAAAAAAAFAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAD9/wMAAQAAAAAAAAD9/wQAAQAAAAAAAAD9/wUAAQAAAAAAAAD+/wMAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wUAAQAAAAAAAAD//wMAAQAAAAAAAAD//wQAAQAAAAAAAAD//wUAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_2rfaq")
+
+[node name="TileMapParede" type="TileMapLayer" parent="." unique_id=1233600250]
+tile_map_data = PackedByteArray("AAAAAP//AwAAAAAAAAAAAAAAAwABAAAAAAABAP//AwAAAAAAAAABAAAAAwABAAAAAAACAP//AwAAAAAAAAACAAAAAwABAAAAAAADAP//AwAAAAAAAAADAAAAAwABAAAAAAAEAP//AwAAAAAAAAAEAAAAAwABAAAAAAAFAP//AwAAAAAAAAAFAAAAAwABAAAAAAAGAP//AwAAAAAAAAAGAAAAAwABAAAAAAAHAP//AwAAAAAAAAAHAAAAAwABAAAAAAAIAP//AwAAAAAAAAAIAAAAAwABAAAAAAAAAAEAAwAAAAEAAAABAAEAAwAAAAEAAAACAAEAAwAAAAEAAAADAAEAAwAAAAEAAAAEAAEAAwAAAAEAAAAFAAEAAwAAAAEAAAAGAAEAAwAAAAEAAAAHAAEAAwAAAAEAAAAIAAEAAwAAAAEAAAD//wIAAwAAAAEAAAD+/wIAAwAAAAEAAAD9/wIAAwAAAAEAAAD//wEAAwABAAAAAAD+/wEAAwABAAAAAAD9/wEAAwABAAAAAAD//wAAAwAAAAAAAAD+/wAAAwAAAAAAAAD9/wAAAwAAAAAAAAA=")
+tile_set = SubResource("TileSet_me8hk")
+
+[node name="TileMapJanela" type="TileMapLayer" parent="." unique_id=501909955]
+tile_map_data = PackedByteArray("AAD4/wUAAAAAAAEAAAAeAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_7lgpo")
+
+[node name="TileMapItems" type="TileMapLayer" parent="." unique_id=2027607156]
+tile_map_data = PackedByteArray("AAAAAAEAAAABAAIAABAEAAIAAAABAAAAAAAFAAEAAAABAAIAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAEAAAACAAIAAAAAAAIAAAADAAIAAAAAAAAAAAAEAAMAAAABAAEAAAAFAAIAAAAAAAEAAAA=")
+tile_set = SubResource("TileSet_ks3gl")
+
+[node name="ParedeEsquerda" type="StaticBody2D" parent="." unique_id=616214056]
+visible = false
+position = Vector2(-90, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda" unique_id=160060781]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_psvq1")
+debug_color = Color(0.2166667, 1, 0, 1)
+
+[node name="ParedeDireita" type="StaticBody2D" parent="." unique_id=1150010193]
+visible = false
+position = Vector2(252, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita" unique_id=24039328]
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_njkqi")
+debug_color = Color(0.31666672, 1, 0, 1)
+
+[node name="ParedeTopo" type="StaticBody2D" parent="." unique_id=898212054]
+visible = false
+position = Vector2(125, 44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeTopo" unique_id=252134815]
+shape = SubResource("RectangleShape2D_0xi1r")
+debug_color = Color(0.069299996, 0.99, 0.14602493, 1)
+
+[node name="ParedeEsquerdaTopo" type="StaticBody2D" parent="." unique_id=1030367755]
+visible = false
+position = Vector2(-40, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerdaTopo" unique_id=1072106304]
+position = Vector2(3.8146973e-06, 24.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_8yaw3")
+debug_color = Color(0.31666672, 1, 0, 1)
+
+[node name="ParedeEsquerdaBase" type="StaticBody2D" parent="." unique_id=592315863]
+visible = false
+position = Vector2(-40, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerdaBase" unique_id=1588938922]
+position = Vector2(0, 26)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_nx4r1")
+debug_color = Color(0, 1, 0.14999986, 1)
+
+[node name="ParedeBase" type="StaticBody2D" parent="." unique_id=1597780938]
+position = Vector2(125, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBase" unique_id=1634504789]
+shape = SubResource("RectangleShape2D_rafh0")
+debug_color = Color(0, 1, 0.14999986, 1)
+
+[node name="Door" parent="." unique_id=860997374 instance=ExtResource("7_c4m8q")]
+position = Vector2(-95, 93)
+rotation = -1.5707964
+skew = 1.0471975
+CenaDestino = "uid://bhutu3fbb2a2d"
+PontoDeEntradaId = "SpawnPortaLeste"
+
+[node name="Microscopio" parent="." unique_id=348411080 instance=ExtResource("5_c6yh5")]
+position = Vector2(145, 26)
+
+[node name="NPCKael" parent="." unique_id=990429205 instance=ExtResource("4_wag7q")]
+position = Vector2(145, 110)
+script = ExtResource("8_wag7q")
+
+[node name="SpawnPortaOeste" type="Marker2D" parent="." unique_id=1974698772]
+position = Vector2(-30, 110)
+
+[node name="PontoIngrediente" parent="." unique_id=730393683 instance=ExtResource("12_lugta")]
+position = Vector2(214, 32)
+PontoId = "lab_1"
+
+[node name="PontoIngrediente2" parent="." unique_id=193975280 instance=ExtResource("12_lugta")]
+position = Vector2(8, 182)
+PontoId = "lab_2"
+
+[node name="PontoIngrediente3" parent="." unique_id=1346255938 instance=ExtResource("12_lugta")]
+position = Vector2(5, 68)
+PontoId = "lab_3"
+
+[node name="Player" parent="." unique_id=1491165222 instance=ExtResource("5_ogp1w")]
+position = Vector2(-30, 105)
+
+[node name="HUD" parent="." unique_id=1589068247 instance=ExtResource("6_17iyb")]

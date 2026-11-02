@@ -32,6 +32,7 @@ size = Vector2(28, 24)
 size = Vector2(23, 16)
 
 [node name="NPCKael" type="Area2D" unique_id=990429205]
+y_sort_enabled = true
 script = ExtResource("1_it428")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=115683397]
