@@ -15,6 +15,7 @@ region = Rect2(0, 10, 60, 65)
 size = Vector2(60, 65)
 
 [node name="Door" type="Area2D" unique_id=860997374]
+z_index = 2
 script = ExtResource("1_mwd7k")
 TexturaAberta = SubResource("AtlasTexture_mwd7k")
 

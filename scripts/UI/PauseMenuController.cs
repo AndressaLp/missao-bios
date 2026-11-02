@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Godot;
+using MissaoBios.scripts.Managers;
 
 namespace MissaoBios.scripts.UI
 {
@@ -44,6 +45,7 @@ namespace MissaoBios.scripts.UI
         public override void _UnhandledInput(InputEvent @event)
         {
             if (!@event.IsActionPressed("ui_cancel")) return;
+            if (!Visible && GetTree().Paused) return; // quando já há outra tela aberta pausando o jogo
 
             string cenaAtual = GetTree().CurrentScene?.SceneFilePath ?? "";
             if (!Visible && cenaAtual == CenaMenuPrincipal) return;
@@ -87,6 +89,7 @@ namespace MissaoBios.scripts.UI
         private void VoltarAoMenu()
         {
             Visible = false;
+            GetNodeOrNull<SaveManager>("/root/SaveManager")?.SalvarProgresso();
             GetTree().Paused = false;
             GetTree().ChangeSceneToFile(CenaMenuPrincipal);
         }

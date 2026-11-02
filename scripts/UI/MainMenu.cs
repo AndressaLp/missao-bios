@@ -9,8 +9,6 @@ namespace MissaoBios.scripts.UI
 {
     public partial class MainMenu : Control
     {
-        // Caminho temporário: ainda não existe a cena do Hangar/Painel Central.
-        // Quando existir, trocar esse caminho.
         private const string CenaDeJogo = "res://scenes/station/Hangar.tscn";
 
         private VBoxContainer _botoesPrincipais;
@@ -65,6 +63,12 @@ namespace MissaoBios.scripts.UI
             AtualizarBotaoContinuar();
         }
 
+        private void ReiniciarPartida()
+        {
+            GetNode<GameManager>("/root/GameManager").ReiniciarEstado();
+            GetNode<PuzzleManager>("/root/PuzzleManager").ReiniciarEstado();
+        }
+
         private void MostrarModal(Control modal)
         {
             _botoesPrincipais.Visible = false;
@@ -98,16 +102,14 @@ namespace MissaoBios.scripts.UI
             var perfil = _saveManager.CriarPerfil(nome, personagem);
             _saveManager.DefinirPerfilAtivo(perfil);
 
+            ReiniciarPartida();
             GetTree().ChangeSceneToFile(CenaDeJogo);
         }
 
         private void ContinuarJogo()
         {
             var ultimo = _saveManager.ObterUltimoPerfil();
-            if (ultimo == null) return;
-
-            _saveManager.DefinirPerfilAtivo(ultimo);
-            GetTree().ChangeSceneToFile(CenaDeJogo);
+            if (ultimo != null) EntrarComPerfil(ultimo);
         }
 
         private void AbrirEscolherJogador()
@@ -126,11 +128,18 @@ namespace MissaoBios.scripts.UI
             MostrarModal(_painelEscolherJogador);
         }
 
-        private void SelecionarPerfil(PerfilJogador perfil)
+        private void EntrarComPerfil(PerfilJogador perfil)
         {
             _saveManager.DefinirPerfilAtivo(perfil);
-            GetTree().ChangeSceneToFile(CenaDeJogo);
+
+            string sala = _saveManager.CarregarProgresso();
+            if (sala == null && perfil.Progresso == null)
+                ReiniciarPartida(); // perfil sem progresso salvo: começa do zero
+
+            GetTree().ChangeSceneToFile(sala ?? CenaDeJogo);
         }
+
+        private void SelecionarPerfil(PerfilJogador perfil) => EntrarComPerfil(perfil);
 
         private void AlternarSom()
         {

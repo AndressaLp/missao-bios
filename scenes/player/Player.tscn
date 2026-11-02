@@ -34,6 +34,7 @@ position = Vector2(-0.5, 16)
 shape = SubResource("RectangleShape2D_4kuee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1926772204]
+z_index = 1
 sprite_frames = ExtResource("2_gfjak")
 animation = &"idle_down"
 

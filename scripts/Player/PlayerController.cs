@@ -10,7 +10,7 @@ namespace MissaoBios.scripts.Player
 {
     public partial class PlayerController : CharacterBody2D
     {
-        [Export] public float Speed = 60f; // pixels/segundo
+        [Export] public float Speed = 75f; // pixels/segundo
         [Export] public SpriteFrames FramesMenino;
         [Export] public SpriteFrames FramesMenina;
 
@@ -19,6 +19,7 @@ namespace MissaoBios.scripts.Player
         private Interactable _interactableProximo;
         private DialogueManager _dialogueManager;
         private Vector2 _ultimaDirecao = Vector2.Down;
+        private readonly List<Interactable> _proximos = new();
 
         public override void _Ready()
         {
@@ -47,6 +48,8 @@ namespace MissaoBios.scripts.Player
 
         public override void _PhysicsProcess(double delta)
         {
+            AtualizarInteragivelProximo();
+            
             bool emDialogo = _dialogueManager != null && _dialogueManager.EmDialogo;
 
             Vector2 direcao = emDialogo ? Vector2.Zero : Input.GetVector("move_left", "move_right", "move_up", "move_down");
@@ -99,20 +102,43 @@ namespace MissaoBios.scripts.Player
 
         private void OnAreaEntrouNoRaio(Area2D area)
         {
-            if (area is Interactable interactable)
-            {
-                _interactableProximo = interactable;
-                _promptInteragir.Visible = true;
-            }
+            GD.Print($"[Player] perto de: {area.Name}"); // temporário
+            if (area is Interactable i && !_proximos.Contains(i)) _proximos.Add(i);
         }
 
         private void OnAreaSaiuDoRaio(Area2D area)
         {
-            if (area == _interactableProximo)
-            {
-                _interactableProximo = null;
-                _promptInteragir.Visible = false;
-            }
+            if (area is Interactable i) _proximos.Remove(i);
         }
+
+        // Escolhe sempre o objeto visível mais próximo, mesmo com vários ao redor.
+        private void AtualizarInteragivelProximo()
+        {
+            _proximos.RemoveAll(i => !IsInstanceValid(i) || !i.IsVisibleInTree());
+
+            _interactableProximo = _proximos
+                .OrderBy(i => i.GlobalPosition.DistanceSquaredTo(GlobalPosition))
+                .FirstOrDefault();
+
+            if (_promptInteragir != null) _promptInteragir.Visible = _interactableProximo != null;
+        }
+
+        // private void OnAreaEntrouNoRaio(Area2D area)
+        // {
+        //     if (area is Interactable interactable)
+        //     {
+        //         _interactableProximo = interactable;
+        //         _promptInteragir.Visible = true;
+        //     }
+        // }
+
+        // private void OnAreaSaiuDoRaio(Area2D area)
+        // {
+        //     if (area == _interactableProximo)
+        //     {
+        //         _interactableProximo = null;
+        //         _promptInteragir.Visible = false;
+        //     }
+        // }
     }
 }

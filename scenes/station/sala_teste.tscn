@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8xor3rocpung"]
 
 [ext_resource type="PackedScene" uid="uid://bt0umcffjp105" path="res://scenes/player/Player.tscn" id="1_33snf"]
+[ext_resource type="PackedScene" uid="uid://dm7gad7ofxncu" path="res://scenes/ui/HUD.tscn" id="2_yf8tx"]
 
 [node name="SalaTeste" type="Node2D" unique_id=1231480580]
 
@@ -25,3 +26,5 @@ position = Vector2(0, 179)
 
 [node name="Player" parent="." unique_id=1491165222 instance=ExtResource("1_33snf")]
 position = Vector2(157, 90)
+
+[node name="HUD" parent="." unique_id=1589068247 instance=ExtResource("2_yf8tx")]

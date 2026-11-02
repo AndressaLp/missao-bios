@@ -12,8 +12,11 @@ namespace MissaoBios.scripts.Interaction
         [Export] public Texture2D TexturaAberta;
         [Export(PropertyHint.File, "*.tscn")] public string CenaDestino = "";
         [Export] public string PontoDeEntradaId = "";
+        [Export] public bool ExigePuzzle1Concluido = false;
+        [Export] public string DialogoTrancada = "";
 
         private Sprite2D _sprite;
+        private bool _abrindo;
 
         public override void _Ready()
         {
@@ -22,14 +25,26 @@ namespace MissaoBios.scripts.Interaction
 
         public override async void Interagir()
         {
+            if (_abrindo) return;
+            
+            var gameManager = GetNode<GameManager>("/root/GameManager");
+
+            if (ExigePuzzle1Concluido && !gameManager.Puzzle1Concluido)
+            {
+                if (!string.IsNullOrEmpty(DialogoTrancada))
+                    GetNode<DialogueManager>("/root/DialogueManager").IniciarDialogo(DialogoTrancada);
+                return;
+            }
+
             if (TexturaAberta != null)
                 _sprite.Texture = TexturaAberta;
 
             if (!string.IsNullOrEmpty(CenaDestino))
             {
+                _abrindo = true;
+                
                 if (!string.IsNullOrEmpty(PontoDeEntradaId))
                 {
-                    var gameManager = GetNode<GameManager>("/root/GameManager");
                     gameManager.ProximoPontoEntrada = PontoDeEntradaId;
                 }
 

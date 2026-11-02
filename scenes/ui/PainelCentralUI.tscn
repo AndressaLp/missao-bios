@@ -6,7 +6,6 @@
 
 [node name="PainelCentralUI" type="CanvasLayer" unique_id=977410622]
 process_mode = 3
-visible = false
 script = ExtResource("1_ln63w")
 
 [node name="Painel" type="Panel" parent="." unique_id=336580306]
@@ -40,12 +39,30 @@ vertical_alignment = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 25.0
-offset_bottom = 37.0
+offset_top = 22.0
+offset_bottom = 34.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_ln63w")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 6
 text = "Progresso da Estação"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelPontuacao" type="Label" parent="Painel" unique_id=1903501850]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -8.0
+offset_right = 50.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ln63w")
+theme_override_font_sizes/font_size = 6
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -57,40 +74,48 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -100.0
-offset_top = -25.0
+offset_top = -29.0
 offset_right = 100.0
-offset_bottom = -7.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_mkivt")
 theme_override_font_sizes/font_size = 12
 
-[node name="LabelBancoDados" type="Label" parent="Painel" unique_id=464155824]
+[node name="LabelBancoDados" type="RichTextLabel" parent="Painel" unique_id=1218320921]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -62.5
-offset_top = 60.0
-offset_right = 62.5
-offset_bottom = 72.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 2.0
+offset_right = 100.0
+offset_bottom = 24.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_ln63w")
-theme_override_font_sizes/font_size = 8
-text = "Banco de Dados: nenhuma descoberta ainda"
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_ln63w")
+theme_override_font_sizes/normal_font_size = 6
+text = "Banco de Dados:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LabelRelatorio" type="Label" parent="Painel" unique_id=893775029]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = -57.0
-offset_top = 85.0
-offset_right = 57.0
-offset_bottom = 97.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = 24.0
+offset_right = 81.0
+offset_bottom = 36.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_ln63w")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 6
 text = "Relatório Final: disponível ao fim da missão"
 horizontal_alignment = 1
 vertical_alignment = 1

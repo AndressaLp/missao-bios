@@ -30,6 +30,9 @@ AudioManager="*res://scripts/Managers/AudioManager.cs"
 PauseMenu="*uid://bx5mobokcatts"
 DialogueUIAutoload="*uid://cnwk0so3widhg"
 PainelCentralUIAutoload="*uid://xnd4238fbun2"
+MicroscopioUIAutoload="*uid://b3t3kfqtpdyjh"
+PacienteUIAutoload="*uid://d3hgk04abn2fn"
+BancadaUIAutoload="*uid://btb2ynfltnvcy"
 
 [display]
 
