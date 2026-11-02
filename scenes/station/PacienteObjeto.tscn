@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cdhney3a4xqi5"]
+
+[ext_resource type="Script" uid="uid://kda8fcei2q7m" path="res://scripts/Interaction/PacienteInteract.cs" id="1_25agx"]
+[ext_resource type="Texture2D" uid="uid://mtpoltl66jxt" path="res://assets/art/environments/enfermaria/objetos_enf.png" id="2_34wng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34wng"]
+atlas = ExtResource("2_34wng")
+region = Rect2(27, 16, 45, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm5vh"]
+atlas = ExtResource("2_34wng")
+region = Rect2(27, 16, 45, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cm5vh"]
+size = Vector2(32, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_34wng"]
+size = Vector2(44.5, 45)
+
+[node name="PacienteObjeto" type="Area2D" unique_id=1407729407]
+script = ExtResource("1_25agx")
+CamaVazia = SubResource("AtlasTexture_34wng")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=352764999]
+position = Vector2(0, 22.75)
+texture = SubResource("AtlasTexture_cm5vh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=372659824]
+position = Vector2(0, 23)
+shape = SubResource("RectangleShape2D_cm5vh")
+debug_color = Color(0, 0.5950001, 0.7, 0.42352942)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2033479847]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1934020567]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_34wng")

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c0mp36ggkej"]
+
+[ext_resource type="Script" uid="uid://wqlsa3ufmepr" path="res://scripts/Interaction/BancadaInteract.cs" id="1_73mvd"]
+[ext_resource type="Texture2D" uid="uid://mtpoltl66jxt" path="res://assets/art/environments/enfermaria/objetos_enf.png" id="2_momoc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0o6yq"]
+atlas = ExtResource("2_momoc")
+region = Rect2(230, 330, 40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktq5f"]
+size = Vector2(40, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73mvd"]
+size = Vector2(40, 20)
+
+[node name="BancadaObjeto" type="Area2D" unique_id=1300936816]
+process_mode = 3
+z_index = 2
+script = ExtResource("1_73mvd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1059187115]
+texture = SubResource("AtlasTexture_0o6yq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=524990642]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_ktq5f")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=19157430]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1239850693]
+z_index = 1
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_73mvd")

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bp7t8jf8unvuu"]
+
+[ext_resource type="Script" uid="uid://c6dq0k5krx1ve" path="res://scripts/Interaction/PontoIngredienteInteract.cs" id="1_ah88a"]
+[ext_resource type="Texture2D" uid="uid://b0sic8rnnxbia" path="res://assets/art/environments/enfermaria/frasco_enf.png" id="2_otqa6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otqa6"]
+atlas = ExtResource("2_otqa6")
+region = Rect2(1, 0, 8, 15)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p6j06"]
+radius = 6.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_otqa6"]
+radius = 4.0
+height = 16.0
+
+[node name="PontoIngrediente" type="Area2D" unique_id=730393683]
+script = ExtResource("1_ah88a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2069235567]
+position = Vector2(0, -2.3841858e-07)
+texture = SubResource("AtlasTexture_otqa6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=672463923]
+shape = SubResource("CapsuleShape2D_p6j06")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=732548425]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=624540807]
+shape = SubResource("CapsuleShape2D_otqa6")

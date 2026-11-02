@@ -1,0 +1,243 @@
+[gd_scene format=4 uid="uid://bjyhq2glkg0vy"]
+
+[ext_resource type="Script" uid="uid://bgk0l8if5ne2o" path="res://scripts/Interaction/SalaMissao.cs" id="1_rcjbk"]
+[ext_resource type="Texture2D" uid="uid://datpmkn2osp3v" path="res://assets/art/environments/estacao_geral/piso_estacao.png" id="2_0461m"]
+[ext_resource type="Texture2D" uid="uid://bdoqu85oppd1x" path="res://assets/art/environments/estacao_geral/parede_estacao.png" id="3_88dvr"]
+[ext_resource type="Texture2D" uid="uid://bo6b2fgq3jl26" path="res://assets/art/environments/estacao_geral/janela_estacao.png" id="4_lebf7"]
+[ext_resource type="Texture2D" uid="uid://mtpoltl66jxt" path="res://assets/art/environments/enfermaria/objetos_enf.png" id="5_iripl"]
+[ext_resource type="Texture2D" uid="uid://vt48185mn38g" path="res://assets/art/environments/enfermaria/bequer_enf.png" id="6_88dvr"]
+[ext_resource type="PackedScene" uid="uid://b5770wv3gpeqm" path="res://scenes/station/Door.tscn" id="6_em600"]
+[ext_resource type="PackedScene" uid="uid://bjt75dsfemaeb" path="res://scenes/npc/NPCJack.tscn" id="9_q5apo"]
+[ext_resource type="PackedScene" uid="uid://cdhney3a4xqi5" path="res://scenes/station/PacienteObjeto.tscn" id="10_1wmic"]
+[ext_resource type="PackedScene" uid="uid://bt0umcffjp105" path="res://scenes/player/Player.tscn" id="10_4uoy3"]
+[ext_resource type="PackedScene" uid="uid://dm7gad7ofxncu" path="res://scenes/ui/HUD.tscn" id="11_lsesu"]
+[ext_resource type="PackedScene" uid="uid://bp7t8jf8unvuu" path="res://scenes/station/PontoIngrediente.tscn" id="11_rcjbk"]
+[ext_resource type="PackedScene" uid="uid://c0mp36ggkej" path="res://scenes/station/BancadaObjeto.tscn" id="12_0461m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lugta"]
+texture = ExtResource("2_0461m")
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_2rfaq"]
+tile_size = Vector2i(27, 27)
+sources/1 = SubResource("TileSetAtlasSource_lugta")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ks3gl"]
+texture = ExtResource("3_88dvr")
+texture_region_size = Vector2i(27, 27)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_me8hk"]
+tile_size = Vector2i(27, 27)
+sources/3 = SubResource("TileSetAtlasSource_ks3gl")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iip40"]
+texture = ExtResource("4_lebf7")
+texture_region_size = Vector2i(60, 30)
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7lgpo"]
+tile_size = Vector2i(6, 6)
+sources/0 = SubResource("TileSetAtlasSource_iip40")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q5apo"]
+texture = ExtResource("5_iripl")
+texture_region_size = Vector2i(100, 100)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.396194, -10.341734, 19.821655, -10.72476, 23.077377, 11.490814, 20.204681, 33.8979, -21.162254, 33.706387, -23.843445, 11.87384)
+1:1/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.352631, -4.979355, 11.945534, -4.972803, 11.203545, 27.96098, -13.118683, 27.96098)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.396194, -10.341734, 19.821655, -10.72476, 23.077377, 11.490814, 20.204681, 33.8979, -21.162254, 33.706387, -23.843445, 11.87384)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.396194, -10.341734, 19.821655, -10.72476, 23.077377, 11.490814, 20.204681, 33.8979, -21.162254, 33.706387, -23.843445, 11.87384)
+0:2/0 = 0
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.352631, -4.979355, 11.945534, -4.972803, 11.203545, 27.96098, -13.118683, 27.96098)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.396194, -10.341734, 19.821655, -10.72476, 23.077377, 11.490814, 20.204681, 33.8979, -21.162254, 33.706387, -23.843445, 11.87384)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.350895, -5.080908, 11.945534, -4.972803, 11.945534, 19.999313, -13.459, 19.891209)
+0:3/0 = 0
+0:3/0/z_index = 2
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.236073, 19.878702, -20.02672, -0.18755436, 20.026724, -0.020838737, 20.146729, 20.14673)
+1:3/0 = 0
+1:3/0/z_index = 2
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.236073, 19.878702, -20.02672, -0.18755436, 20.026724, -0.020838737, 20.146729, 20.14673)
+2:3/0 = 0
+2:3/0/z_index = 2
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.236073, 19.878702, -20.02672, -0.18755436, 20.026724, -0.020838737, 20.146729, 20.14673)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lebf7"]
+texture = ExtResource("6_88dvr")
+texture_region_size = Vector2i(29, 70)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+0:1/0/z_index = 3
+2:0/0 = 0
+2:0/0/z_index = 3
+3:0/0 = 0
+3:0/0/z_index = 3
+1:1/0 = 0
+1:1/0/z_index = 3
+
+[sub_resource type="TileSet" id="TileSet_1wmic"]
+tile_size = Vector2i(2, 2)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_q5apo")
+sources/1 = SubResource("TileSetAtlasSource_lebf7")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psvq1"]
+size = Vector2(120, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_njkqi"]
+size = Vector2(195, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xi1r"]
+size = Vector2(330, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yaw3"]
+size = Vector2(73, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nx4r1"]
+size = Vector2(50, 82)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rafh0"]
+size = Vector2(330, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88dvr"]
+atlas = ExtResource("5_iripl")
+region = Rect2(127, 16, 45, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lebf7"]
+atlas = ExtResource("5_iripl")
+region = Rect2(227, 116, 45, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f681f"]
+atlas = ExtResource("5_iripl")
+region = Rect2(27, 116, 45, 68)
+
+[node name="Laboratorio" type="Node2D" unique_id=1227798328]
+script = ExtResource("1_rcjbk")
+MissaoConcluirAoEntrar = "ir_enfermaria"
+
+[node name="TileMapChao" type="TileMapLayer" parent="." unique_id=889703090]
+tile_map_data = PackedByteArray("AAAAAAIAAQAAAAAAAAABAAIAAQAAAAAAAAACAAIAAQAAAAAAAAADAAIAAQAAAAAAAAAEAAIAAQAAAAAAAAAFAAIAAQAAAAAAAAAGAAIAAQAAAAAAAAAHAAIAAQAAAAAAAAAIAAIAAQAAAAAAAAAIAAMAAQAAAAAAAAAHAAMAAQAAAAAAAAAGAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAADAAMAAQAAAAAAAAACAAMAAQAAAAAAAAABAAMAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAABAAQAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAHAAUAAQAAAAAAAAAGAAUAAQAAAAAAAAAFAAUAAQAAAAAAAAAEAAUAAQAAAAAAAAADAAUAAQAAAAAAAAACAAUAAQAAAAAAAAABAAUAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAABAAYAAQAAAAAAAAACAAYAAQAAAAAAAAADAAYAAQAAAAAAAAAEAAYAAQAAAAAAAAAFAAYAAQAAAAAAAAAGAAYAAQAAAAAAAAAHAAYAAQAAAAAAAAAIAAYAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAKAAMAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAALAAMAAQAAAAAAAAALAAQAAQAAAAAAAAALAAUAAQAAAAAAAAD//wIAAQAAAAAAAAD//wMAAQAAAAAAAAD//wQAAQAAAAAAAAD//wUAAQAAAAAAAAD//wYAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wMAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wUAAQAAAAAAAAD+/wYAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_2rfaq")
+
+[node name="TileMapParede" type="TileMapLayer" parent="." unique_id=1233600250]
+tile_map_data = PackedByteArray("AAAAAP//AwAAAAAAAAAAAAAAAwABAAAAAAABAP//AwAAAAAAAAABAAAAAwABAAAAAAACAP//AwAAAAAAAAACAAAAAwABAAAAAAADAP//AwAAAAAAAAADAAAAAwABAAAAAAAEAP//AwAAAAAAAAAEAAAAAwABAAAAAAAFAP//AwAAAAAAAAAFAAAAAwABAAAAAAAGAP//AwAAAAAAAAAGAAAAAwABAAAAAAAHAP//AwAAAAAAAAAHAAAAAwABAAAAAAAIAP//AwAAAAAAAAAIAAAAAwABAAAAAAAAAAEAAwAAAAEAAAABAAEAAwAAAAEAAAACAAEAAwAAAAEAAAADAAEAAwAAAAEAAAAEAAEAAwAAAAEAAAAFAAEAAwAAAAEAAAAGAAEAAwAAAAEAAAAHAAEAAwAAAAEAAAAIAAEAAwAAAAEAAAALAAIAAwAAAAEAAAAKAAIAAwAAAAEAAAAJAAIAAwAAAAEAAAAJAAEAAwABAAAAAAAKAAEAAwABAAAAAAALAAEAAwABAAAAAAAJAAAAAwAAAAAAAAAKAAAAAwAAAAAAAAALAAAAAwAAAAAAAAD//wEAAwAAAAEAAAD+/wEAAwAAAAEAAAD+////AwAAAAAAAAD/////AwAAAAAAAAD+/wAAAwABAAAAAAD//wAAAwABAAAAAAA=")
+tile_set = SubResource("TileSet_me8hk")
+
+[node name="TileMapJanela" type="TileMapLayer" parent="." unique_id=501909955]
+tile_map_data = PackedByteArray("AAAvAAUAAAAAAAEAAAAgAAEAAAAAAAAAAAAQAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_7lgpo")
+
+[node name="TileMapObjetos" type="TileMapLayer" parent="." unique_id=344792712]
+scale = Vector2(0.9, 0.9)
+tile_map_data = PackedByteArray("AABHAFgAAQAAAAEAAFAuAFYAAQACAAAAAAA9AFcAAQADAAAAAAB/ABkAAAACAAIAAABKABkAAAACAAIAAABZABYAAAABAAIAAAAUABkAAAACAAIAAAAkABYAAAABAAIAAADu/xYAAAABAAIAAAAdAF4AAAABAAMAAABEAF4AAAACAAMAAABYAF4AAAAAAAMAAAA=")
+tile_set = SubResource("TileSet_1wmic")
+
+[node name="ParedeEsquerda" type="StaticBody2D" parent="." unique_id=616214056]
+position = Vector2(334, 108)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerda" unique_id=160060781]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_psvq1")
+debug_color = Color(0.2166667, 1, 0, 1)
+
+[node name="ParedeDireita" type="StaticBody2D" parent="." unique_id=1150010193]
+position = Vector2(-64, 106)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeDireita" unique_id=24039328]
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_njkqi")
+debug_color = Color(0.31666672, 1, 0, 1)
+
+[node name="ParedeTopo" type="StaticBody2D" parent="." unique_id=898212054]
+position = Vector2(109, 44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeTopo" unique_id=252134815]
+shape = SubResource("RectangleShape2D_0xi1r")
+debug_color = Color(0.069299996, 0.99, 0.14602493, 1)
+
+[node name="ParedeEsquerdaTopo" type="StaticBody2D" parent="." unique_id=1030367755]
+position = Vector2(284, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerdaTopo" unique_id=1072106304]
+position = Vector2(3.8146973e-06, 24.5)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_8yaw3")
+debug_color = Color(0.31666672, 1, 0, 1)
+
+[node name="ParedeEsquerdaBase" type="StaticBody2D" parent="." unique_id=592315863]
+position = Vector2(284, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeEsquerdaBase" unique_id=1588938922]
+position = Vector2(0, 26)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_nx4r1")
+debug_color = Color(0, 1, 0.14999986, 1)
+
+[node name="ParedeBase" type="StaticBody2D" parent="." unique_id=1597780938]
+position = Vector2(107, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ParedeBase" unique_id=1634504789]
+shape = SubResource("RectangleShape2D_rafh0")
+debug_color = Color(0, 1, 0.14999986, 1)
+
+[node name="Door" parent="." unique_id=860997374 instance=ExtResource("6_em600")]
+position = Vector2(340, 93)
+rotation = 1.5707964
+skew = -1.0471976
+CenaDestino = "uid://bhutu3fbb2a2d"
+PontoDeEntradaId = "SpawnPortaOeste"
+
+[node name="Player" parent="." unique_id=1491165222 instance=ExtResource("10_4uoy3")]
+position = Vector2(276, 105)
+
+[node name="NPCJack" parent="." unique_id=990429205 instance=ExtResource("9_q5apo")]
+position = Vector2(43, 126)
+
+[node name="SpawnPortaLeste" type="Marker2D" parent="." unique_id=1974698772]
+position = Vector2(276, 110)
+
+[node name="PacienteObjeto" parent="." unique_id=1407729407 instance=ExtResource("10_1wmic")]
+position = Vector2(195, 37)
+CamaComPaciente = SubResource("AtlasTexture_88dvr")
+
+[node name="PacienteObjeto2" parent="." unique_id=651773930 instance=ExtResource("10_1wmic")]
+position = Vector2(100, 37)
+Posicao = 2
+CamaComPaciente = SubResource("AtlasTexture_lebf7")
+
+[node name="PacienteObjeto3" parent="." unique_id=1417216939 instance=ExtResource("10_1wmic")]
+position = Vector2(3, 37)
+Posicao = 3
+CamaComPaciente = SubResource("AtlasTexture_f681f")
+
+[node name="PontoIngrediente" parent="." unique_id=730393683 instance=ExtResource("11_rcjbk")]
+position = Vector2(-32, 57)
+PontoId = "enf_1"
+
+[node name="PontoIngrediente2" parent="." unique_id=585916238 instance=ExtResource("11_rcjbk")]
+position = Vector2(235, 178)
+PontoId = "enf_2"
+
+[node name="PontoIngrediente3" parent="." unique_id=808061771 instance=ExtResource("11_rcjbk")]
+position = Vector2(239, 62)
+PontoId = "enf_3"
+
+[node name="HUD" parent="." unique_id=1589068247 instance=ExtResource("11_lsesu")]
+
+[node name="BancadaObjeto" parent="." unique_id=1300936816 instance=ExtResource("12_0461m")]
+position = Vector2(87.5, 170.1)
+scale = Vector2(0.9, 0.9)

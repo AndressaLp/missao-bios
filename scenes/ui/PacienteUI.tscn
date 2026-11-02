@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://d3hgk04abn2fn"]
+
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="1_n1nek"]
+[ext_resource type="Script" uid="uid://dy5o657rjmxlo" path="res://scripts/UI/PacienteUI.cs" id="1_x8l1d"]
+[ext_resource type="Texture2D" uid="uid://lrnu5pdelym4" path="res://assets/art/ui/botao_modal.png" id="2_x8l1d"]
+[ext_resource type="Texture2D" uid="uid://de8hdpt5u6wcq" path="res://assets/art/ui/modal.png" id="3_fmyuu"]
+[ext_resource type="FontFile" uid="uid://di4blnr4h1xln" path="res://assets/fonts/SpaceMono-Regular.ttf" id="4_7kr7m"]
+[ext_resource type="Texture2D" uid="uid://bukqas48hyxqu" path="res://assets/art/ui/botao_main.png" id="6_fmyuu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7l07a"]
+atlas = ExtResource("2_x8l1d")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4pqh3"]
+texture = SubResource("AtlasTexture_7l07a")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uypwm"]
+atlas = ExtResource("2_x8l1d")
+region = Rect2(0, 36, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2xdo"]
+texture = SubResource("AtlasTexture_uypwm")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud5ls"]
+atlas = ExtResource("2_x8l1d")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hnbbj"]
+texture = SubResource("AtlasTexture_ud5ls")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdnnv"]
+atlas = ExtResource("2_x8l1d")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bajrg"]
+texture = SubResource("AtlasTexture_gdnnv")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_he7lt"]
+atlas = ExtResource("2_x8l1d")
+region = Rect2(0, 36, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i684w"]
+texture = SubResource("AtlasTexture_he7lt")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfyar"]
+atlas = ExtResource("2_x8l1d")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eikdo"]
+texture = SubResource("AtlasTexture_yfyar")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl41d"]
+atlas = ExtResource("3_fmyuu")
+region = Rect2(0, 0, 220, 130)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m355a"]
+texture = SubResource("AtlasTexture_kl41d")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kr7m"]
+atlas = ExtResource("6_fmyuu")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7l07a"]
+texture = SubResource("AtlasTexture_7kr7m")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pqh3"]
+atlas = ExtResource("6_fmyuu")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uypwm"]
+texture = SubResource("AtlasTexture_4pqh3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2xdo"]
+atlas = ExtResource("6_fmyuu")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ud5ls"]
+texture = SubResource("AtlasTexture_q2xdo")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnbbj"]
+atlas = ExtResource("6_fmyuu")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdnnv"]
+texture = SubResource("AtlasTexture_hnbbj")
+
+[node name="PacienteUI" type="CanvasLayer" unique_id=1418638253]
+script = ExtResource("1_x8l1d")
+
+[node name="Control" type="Control" parent="." unique_id=198993456]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fundo" type="ColorRect" parent="Control" unique_id=1308593717]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ImagemPaciente" type="TextureRect" parent="Control" unique_id=1040243530]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 10.0
+offset_right = 297.0
+offset_bottom = 120.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ManchasPaciente" type="TextureRect" parent="Control/ImagemPaciente" unique_id=1962241771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="BotaoVoltar" type="Button" parent="Control" unique_id=798026520]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 47.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_n1nek")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_4pqh3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q2xdo")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hnbbj")
+text = "Voltar"
+
+[node name="BotaoDica" type="Button" parent="Control" unique_id=403872938]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 7.0
+offset_right = 92.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_n1nek")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_bajrg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i684w")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eikdo")
+text = "Dica(3)"
+
+[node name="PainelInfo" type="Panel" parent="Control" unique_id=367028589]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 32.0
+offset_right = 122.0
+offset_bottom = 102.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_m355a")
+
+[node name="LabelNome" type="Label" parent="Control/PainelInfo" unique_id=1324351810]
+layout_mode = 1
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 107.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("1_n1nek")
+theme_override_font_sizes/font_size = 8
+autowrap_mode = 3
+
+[node name="LabelFicha" type="Label" parent="Control/PainelInfo" unique_id=1490028342]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 13.0
+offset_right = 108.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_fonts/font = ExtResource("4_7kr7m")
+theme_override_font_sizes/font_size = 4
+autowrap_mode = 3
+
+[node name="PainelDica1" type="Panel" parent="Control" unique_id=1584670045]
+visible = false
+clip_contents = true
+layout_mode = 0
+offset_left = 129.0
+offset_top = 105.0
+offset_right = 313.0
+offset_bottom = 125.0
+
+[node name="LabelDica" type="Label" parent="Control/PainelDica1" unique_id=472369824]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.5
+offset_right = 179.0
+offset_bottom = 18.5
+theme_override_fonts/font = ExtResource("4_7kr7m")
+theme_override_font_sizes/font_size = 4
+autowrap_mode = 3
+
+[node name="PainelDica2" type="Panel" parent="Control" unique_id=722867796]
+visible = false
+clip_contents = true
+layout_mode = 0
+offset_left = 129.0
+offset_top = 128.0
+offset_right = 313.0
+offset_bottom = 148.0
+
+[node name="LabelDica" type="Label" parent="Control/PainelDica2" unique_id=791868201]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.5
+offset_right = 179.0
+offset_bottom = 18.5
+theme_override_fonts/font = ExtResource("4_7kr7m")
+theme_override_font_sizes/font_size = 4
+autowrap_mode = 3
+
+[node name="PainelDica3" type="Panel" parent="Control" unique_id=48741272]
+visible = false
+clip_contents = true
+layout_mode = 0
+offset_left = 129.0
+offset_top = 151.0
+offset_right = 313.0
+offset_bottom = 171.0
+
+[node name="LabelDica" type="Label" parent="Control/PainelDica3" unique_id=1607083143]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 1.5
+offset_right = 179.0
+offset_bottom = 18.5
+theme_override_fonts/font = ExtResource("4_7kr7m")
+theme_override_font_sizes/font_size = 4
+autowrap_mode = 3
+
+[node name="BotaoRemedio" type="Button" parent="Control" unique_id=699946627]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 107.0
+offset_right = 122.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_n1nek")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_7l07a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uypwm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ud5ls")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_gdnnv")
+text = "Dar remédio"

@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://btb2ynfltnvcy"]
+
+[ext_resource type="FontFile" uid="uid://14s82wljwp27" path="res://assets/fonts/Jersey10-Regular.ttf" id="1_1dkc1"]
+[ext_resource type="Script" uid="uid://d0uh5xbux1fso" path="res://scripts/UI/BancadaUI.cs" id="1_genab"]
+[ext_resource type="Texture2D" uid="uid://lrnu5pdelym4" path="res://assets/art/ui/botao_modal.png" id="2_genab"]
+[ext_resource type="Texture2D" uid="uid://vt48185mn38g" path="res://assets/art/environments/enfermaria/bequer_enf.png" id="2_q2nec"]
+[ext_resource type="FontFile" uid="uid://di4blnr4h1xln" path="res://assets/fonts/SpaceMono-Regular.ttf" id="3_q2nec"]
+[ext_resource type="Texture2D" uid="uid://bukqas48hyxqu" path="res://assets/art/ui/botao_main.png" id="4_d07we"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d07we"]
+atlas = ExtResource("2_q2nec")
+region = Rect2(3, 4, 54, 66)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mun26"]
+atlas = ExtResource("2_genab")
+region = Rect2(0, 0, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sutdy"]
+texture = SubResource("AtlasTexture_mun26")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfeph"]
+atlas = ExtResource("2_genab")
+region = Rect2(0, 36, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jxgtc"]
+texture = SubResource("AtlasTexture_pfeph")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tucy2"]
+atlas = ExtResource("2_genab")
+region = Rect2(0, 18, 40, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y4ost"]
+texture = SubResource("AtlasTexture_tucy2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eon24"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4oxp8"]
+texture = SubResource("AtlasTexture_eon24")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvle2"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0706n"]
+texture = SubResource("AtlasTexture_cvle2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_204ct"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3i6h"]
+texture = SubResource("AtlasTexture_204ct")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dkc1"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_genab"]
+texture = SubResource("AtlasTexture_1dkc1")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2nec"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d07we"]
+texture = SubResource("AtlasTexture_q2nec")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sutdy"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pfeph"]
+texture = SubResource("AtlasTexture_sutdy")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxgtc"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tucy2"]
+texture = SubResource("AtlasTexture_jxgtc")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4ost"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eon24"]
+texture = SubResource("AtlasTexture_y4ost")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oxp8"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cvle2"]
+texture = SubResource("AtlasTexture_4oxp8")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0706n"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 0, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_204ct"]
+texture = SubResource("AtlasTexture_0706n")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3i6h"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 36, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_840jj"]
+texture = SubResource("AtlasTexture_m3i6h")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol47y"]
+atlas = ExtResource("4_d07we")
+region = Rect2(0, 18, 100, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3a5sq"]
+texture = SubResource("AtlasTexture_ol47y")
+
+[node name="BancadaUI" type="CanvasLayer" unique_id=1859649151]
+script = ExtResource("1_genab")
+
+[node name="Control" type="Control" parent="." unique_id=385126124]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fundo" type="ColorRect" parent="Control" unique_id=941643428]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Bequer" type="TextureRect" parent="Control" unique_id=1228081901]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 35.0
+offset_right = 297.0
+offset_bottom = 145.0
+texture = SubResource("AtlasTexture_d07we")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Fumaca" type="CPUParticles2D" parent="Control/Bequer" unique_id=481858000]
+emitting = false
+one_shot = true
+
+[node name="BotaoVoltar" type="Button" parent="Control" unique_id=421766363]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 47.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_1dkc1")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_sutdy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jxgtc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_y4ost")
+text = "Voltar"
+
+[node name="BotaoItem1" type="Button" parent="Control" unique_id=272859152]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 34.0
+offset_right = 122.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("3_q2nec")
+theme_override_font_sizes/font_size = 5
+theme_override_styles/normal = SubResource("StyleBoxTexture_4oxp8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0706n")
+theme_override_styles/hover = SubResource("StyleBoxTexture_m3i6h")
+toggle_mode = true
+
+[node name="BotaoItem2" type="Button" parent="Control" unique_id=1851426297]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 57.0
+offset_right = 122.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("3_q2nec")
+theme_override_font_sizes/font_size = 5
+theme_override_styles/normal = SubResource("StyleBoxTexture_genab")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_d07we")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pfeph")
+toggle_mode = true
+
+[node name="BotaoItem3" type="Button" parent="Control" unique_id=1243299959]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 80.0
+offset_right = 122.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("3_q2nec")
+theme_override_font_sizes/font_size = 5
+theme_override_styles/normal = SubResource("StyleBoxTexture_tucy2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eon24")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cvle2")
+toggle_mode = true
+
+[node name="BotaoMisturar" type="Button" parent="Control" unique_id=47932269]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 118.0
+offset_right = 122.0
+offset_bottom = 136.0
+theme_override_colors/font_color = Color(0.42745098, 0.20392157, 0.13725491, 1)
+theme_override_colors/font_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.1882353, 0.06666667, 0.047058824, 1)
+theme_override_fonts/font = ExtResource("1_1dkc1")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_204ct")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_840jj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3a5sq")
+text = "Misturar"
+
+[node name="PainelJack" type="Panel" parent="Control" unique_id=15867914]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 151.0
+offset_right = 313.0
+offset_bottom = 171.0
+
+[node name="LabelJack" type="Label" parent="Control/PainelJack" unique_id=484514338]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -8.5
+offset_right = 87.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_q2nec")
+theme_override_font_sizes/font_size = 5
+autowrap_mode = 3
